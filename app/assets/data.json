@@ -1,0 +1,67 @@
+{
+  "1" : {
+    "title": "Bienvenue !",
+    "actions": {
+      "A": {
+        "name": "avancer",
+        "route": 2
+      }
+    }
+  },
+  "2" : {
+    "title": "Où aller ?",
+    "actions": {
+      "A": {
+        "name": "à gauche",
+        "route": 3
+      }, 
+      "B": {
+        "name": "à droite",
+        "route": 4
+      }
+    }
+  },
+  "3" : {
+    "title": "Chemin tranquille",
+    "actions": {
+      "A": {
+        "name": "avancer",
+        "route": 5
+      }
+    }
+  },
+  "4" : {
+    "title": "Chemin dangereux",
+    "actions": {
+      "A": {
+        "name": "revenir",
+        "route": 2
+      }, 
+      "B": {
+        "name": "avancer",
+        "route": 6
+      }
+    }
+  },
+  "5" : {
+    "title": "Arrivée",
+    "actions": {
+      "A": {
+        "name": "continuer",
+        "route": "/win"
+      }
+    },
+    "win": true
+  },
+  "6" : {
+    "title": "Piège mortel",
+    "actions": {
+      "A": {
+        "name": "continuer",
+        "route": "/lose"
+      }
+    },
+    "win": false
+  }
+
+}
