@@ -1,7 +1,6 @@
 {
 "levels" : {
     "phase1" : {
-      "id": 1,
       "title": "Bienvenue !",
       "actions": {
         "A": {
@@ -11,7 +10,6 @@
       }
     },
     "phase2" : {
-      "id": 2,
       "title": "Où aller ?",
       "actions": {
         "A": {
@@ -25,7 +23,6 @@
       }
     },
     "phase3" : {
-      "id": 3,
       "title": "Chemin tranquille",
       "actions": {
         "A": {
@@ -35,7 +32,6 @@
       }
     },
     "phase4" : {
-      "id": 4,
       "title": "Chemin dangereux",
       "actions": {
         "A": {
@@ -49,7 +45,6 @@
       }
     },
     "phase5" : {
-      "id": 5,
       "title": "Arrivée",
       "actions": {
         "A": {
@@ -60,7 +55,6 @@
       "win": true
     },
     "phase6" : {
-      "id": 6,
       "title": "Piège mortel",
       "actions": {
         "A": {
@@ -70,8 +64,5 @@
       },
       "win": false
     }
-  },
-  "state" : {
-    "id": 1
   }
 }

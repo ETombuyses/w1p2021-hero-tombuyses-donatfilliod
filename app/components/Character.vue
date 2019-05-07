@@ -1,6 +1,6 @@
 <template>
   <div class="big-header">
-    <h1>Page du choix de personnage</h1>
+    <h1>Choix du personnage</h1>
     <br />
     <router-link class="button" to="/game/1">Jouer</router-link>
   </div>
@@ -8,4 +8,7 @@
 
 <script>
 
+export default {
+  
+}
 </script>
