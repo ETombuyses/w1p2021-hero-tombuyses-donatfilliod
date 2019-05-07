@@ -11,12 +11,15 @@
 
 
 <script>
-//import data.JSON file
+//import data.json file
 let game = require('../assets/data.json');
 
 
 export default {
   
+  data: {
+    test: "1"
+  },
   methods: {
     idUpdate() {
       console.log("cliqué");
@@ -26,7 +29,7 @@ export default {
   },
   computed: {
     title() {
-      return game.levels[`phase${game.state.id}`].title;
+      return game.levels[`phase${this.test}`].title;
     },
     pathA() {
       return `/game/${game.levels[`phase${game.state.id}`].actions.A.route}`;
