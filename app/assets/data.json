@@ -1,67 +1,77 @@
 {
-  "1" : {
-    "title": "Bienvenue !",
-    "actions": {
-      "A": {
-        "name": "avancer",
-        "route": 2
-      }
-    }
-  },
-  "2" : {
-    "title": "Où aller ?",
-    "actions": {
-      "A": {
-        "name": "à gauche",
-        "route": 3
-      }, 
-      "B": {
-        "name": "à droite",
-        "route": 4
-      }
-    }
-  },
-  "3" : {
-    "title": "Chemin tranquille",
-    "actions": {
-      "A": {
-        "name": "avancer",
-        "route": 5
-      }
-    }
-  },
-  "4" : {
-    "title": "Chemin dangereux",
-    "actions": {
-      "A": {
-        "name": "revenir",
-        "route": 2
-      }, 
-      "B": {
-        "name": "avancer",
-        "route": 6
-      }
-    }
-  },
-  "5" : {
-    "title": "Arrivée",
-    "actions": {
-      "A": {
-        "name": "continuer",
-        "route": "/win"
+"levels" : {
+    "phase1" : {
+      "id": 1,
+      "title": "Bienvenue !",
+      "actions": {
+        "A": {
+          "name": "avancer",
+          "route": 2
+        }
       }
     },
-    "win": true
-  },
-  "6" : {
-    "title": "Piège mortel",
-    "actions": {
-      "A": {
-        "name": "continuer",
-        "route": "/lose"
+    "phase2" : {
+      "id": 2,
+      "title": "Où aller ?",
+      "actions": {
+        "A": {
+          "name": "à gauche",
+          "route": 3
+        }, 
+        "B": {
+          "name": "à droite",
+          "route": 4
+        }
       }
     },
-    "win": false
+    "phase3" : {
+      "id": 3,
+      "title": "Chemin tranquille",
+      "actions": {
+        "A": {
+          "name": "avancer",
+          "route": 5
+        }
+      }
+    },
+    "phase4" : {
+      "id": 4,
+      "title": "Chemin dangereux",
+      "actions": {
+        "A": {
+          "name": "revenir",
+          "route": 2
+        }, 
+        "B": {
+          "name": "avancer",
+          "route": 6
+        }
+      }
+    },
+    "phase5" : {
+      "id": 5,
+      "title": "Arrivée",
+      "actions": {
+        "A": {
+          "name": "continuer",
+          "route": "/win"
+        }
+      },
+      "win": true
+    },
+    "phase6" : {
+      "id": 6,
+      "title": "Piège mortel",
+      "actions": {
+        "A": {
+          "name": "continuer",
+          "route": "/lose"
+        }
+      },
+      "win": false
+    }
+  },
+  "state" : {
+    "id": 1
   }
-
 }
