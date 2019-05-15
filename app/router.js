@@ -43,7 +43,7 @@ const router = new Router({
       path: '*',
       redirect: { name: 'home' },
     },
-  ],
+  ]
 });
 
 export default router;

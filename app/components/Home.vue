@@ -7,12 +7,17 @@
 </template>
 
 <script>
+
 export default {
-  
   data() {
     return {
       message: 'Escape game'
     };
+  }, 
+  //when we arrive 
+  created: function () {
+    localStorage.clear()
   }
 };
+
 </script>
