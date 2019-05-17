@@ -1,54 +1,91 @@
 <template>
-  <transition>
-    <div class="big-header">
-      <h1> {{ title }} </h1>
-      <br />
-      <!--  on click, we change the route path-->
-      <router-link class="button" :to="pathA" > {{ optionA }} </router-link>
+  <div class="big-header">
+    <transition name="pane">
+      <div v-if="transition"></div>
+    </transition>
+
+    <h1> {{ chapter.title }} </h1>
+    <p v-for="text in chapter.texts" :key="text.id"> {{ text }}</p>
+    <p> {{ chapter.question }}</p>
+
+    <!--  on click, we change the route path-->
+    <div v-for="action in chapter.actions" class="button" :key="action.name" @click="choiceSelected(action)" > 
+      {{ action.name }} 
     </div>
-  </transition>
+  </div>
 </template>
 
 
 
 <script>
 /*import data.json file */
-let game = require('../assets/data.json');
+
+import game from '../assets/data.json';
+import characterUpdate from '../assets/services/character.js';
 
 export default {
   data() {
     return {
-      id: localStorage.getItem("level")
+      chapter: this.findChapter(),
+      transition: false
     }
   },
-  computed: {
-    title() {
-      return game.levels[`phase${this.id}`].title;
+  methods: {
+    //find te right chapter based on url/:id
+    findChapter() {
+      return game.chapters.find(chapter => chapter.id === parseInt(this.$route.params.id));
     },
-    pathA() {
-      return `/game/${game.levels[`phase${this.id}`].actions.A.route}`;
-    }, 
-    optionA() {
-      return game.levels[`phase${this.id}`].actions.A.name;
-    }
-  },
-   watch: {
-     /* when the id in the url changes, it changes the game id and save it as the last level reached */
-     // does not work when we try to cheat by changing the url manually
-     //only a click on a choice does change the id in the url 
-     // OR a click on "go back / go prev" on the browser
+    choiceSelected(action) {
+      //if there is a condition
+      if(action.condition) {
+          characterUpdate.updateSkills(action);      
+        if (eval(`${characterUpdate[action.condition.skill]} ${action.condition.condition}`)) {
+          this.$router.push({path: action.condition.true}) 
+        } else {
+          this.$router.push({params: {id: action.path}});                    
+        }
+      }
 
-    '$route.params.id': function(id) {
-      localStorage.setItem("level", id)      
-      this.id = id;
-    }
-  },
+      //if there is no condition 
+      else {
+        let nextPath = action.path
 
-  //we set the first level to 1 for the first time we enter the game
-  beforeCreate: function() {
-    if(!localStorage.getItem('level')) {
-      localStorage.setItem('level', 1)
-    } 
+        if(nextPath == "win") {
+          this.$router.push({path: '/win'})
+        } else if (nextPath == "lose") {
+          this.$router.push({path: '/lose'})
+        } else {
+          characterUpdate.updateSkills(action);
+          this.$router.push({params: {id: nextPath}})
+          localStorage.setItem('save', nextPath);
+        }
+      }
+
+      //transition doesn't work yet
+      // this.transition = !this.transition;
+
+      // setTimeout(function() {
+      //   this.transition = !this.transition;
+      //   console.log('changed');
+      // }, 1000)
+    },
+  },
+  mounted() {
+    let save = localStorage.getItem('save');
+    
+    if(save) {
+      this.$router.push({path: save});
+    }
+
+    //trigger transition
+    this.transition = !this.transition;
+
+  },
+  watch: {
+     // on url change, change the chapter
+    '$route.params.id'(to, from) {
+      this.chapter = this.findChapter();
+    }
   }
 }
 </script>

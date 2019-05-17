@@ -6,6 +6,7 @@ import Character from './components/Character.vue';
 import Win from './components/Win.vue';
 import Lose from './components/Lose.vue';
 import Game from './components/Game.vue';
+import Chapter1 from './components/Chapter1.vue';
 
 
 Vue.use(Router);
@@ -40,9 +41,14 @@ const router = new Router({
       component: Lose,
     },
     {
+      path: '/chapter1',
+      name: 'chapter1',
+      component: Chapter1,
+    },
+    {
       path: '*',
       redirect: { name: 'home' },
-    },
+    }
   ]
 });
 

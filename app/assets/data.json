@@ -1,68 +1,271 @@
 {
-"levels" : {
-    "phase1" : {
-      "title": "Bienvenue !",
-      "actions": {
-        "A": {
-          "name": "avancer",
-          "route": 2
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Le crash",
+      "texts": [
+        "Vous avez survécu à un crash d’avion en plein milieu des montagnes de l’Himalaya. Vous devez trouver un moyen de rejoindre une ville. Vous vous mettez en route, effrayé, sans affaires.",
+        "Vous voyez alors un survivant à l’agonie, bloqué sous des décombres, qui vous prie de l’aider. Il semble avoir beaucoup d’équipement sur lui, qui pourrait vous être utile."
+      ],
+      "question": "Que choisissez-vous ?",
+      "actions": [
+        {
+          "name": "Aider le survivant",
+          "path": 2,
+          "social": 1,
+          "ruse": -1
+        },
+        {
+          "name": "Le tuer et lui voler ses affaires",
+          "path": 3,
+          "social": -1,
+          "ruse": 1
         }
-      }
+      ]
     },
-    "phase2" : {
-      "title": "Où aller ?",
-      "actions": {
-        "A": {
-          "name": "à gauche",
-          "route": 3
-        }, 
-        "B": {
-          "name": "à droite",
-          "route": 4
+    {
+      "id": 2,
+      "title": "Traditions",
+      "texts": [
+        "Le survivant va rendre son dernier souffle. Avant de mourir, il demande à être enterré.",
+        "Un homme, semblant être un pèlerin de la région, arrive. Il vous explique que les traditions de cette région exigent une sépulture céleste pour les défunts."
+      ],
+      "question": "Que faites-vous ?",
+      "actions": [
+        {
+          "name": "L’enterrer",
+          "path": 4,
+          "social": 1,
+          "benediction": -1
+        },
+        {
+          "name": "Lui faire une Sépulture céleste",
+          "path": 4,
+          "social": -1,
+          "benediction": 1
         }
-      }
+      ]
     },
-    "phase3" : {
-      "title": "Chemin tranquille",
-      "actions": {
-        "A": {
-          "name": "avancer",
-          "route": 5
+    {
+      "id": 3,
+      "title": "Assassin",
+      "texts": [
+        "Vous achevez le survivant à l'aide d'un rocher et vous décidez de prendre son équipement.",
+        "Vous hésitez à lui prendre ses vêtements."
+      ],
+      "question": "Que choisissez-vous ?",
+      "actions": [
+        {
+          "name": "Lui prendre ses vêtements",
+          "path": 5,
+          "social": -1,
+          "ruse": 1
+        },
+        {
+          "name": "Lui laisser ses vêtements",
+          "path": 5,
+          "social": 1,
+          "ruse": -1
         }
-      }
+      ]
     },
-    "phase4" : {
-      "title": "Chemin dangereux",
-      "actions": {
-        "A": {
-          "name": "revenir",
-          "route": 2
-        }, 
-        "B": {
-          "name": "avancer",
-          "route": 6
+    {
+      "id": 4,
+      "title": "Le sherpa",
+      "texts": [
+        "L’homme s’avère être un sherpa, il connaît bien les montagnes.",
+        "Vous lui raconter votre situation. Il vous indique le chemin pour se rendre à la ville la plus proche.",
+        " Il n’a pas grand-chose pour vous aider, mais il peut vous proposer :"
+      ],
+      "actions": [
+        {
+          "name": "Thé au beurre",
+          "path": 5,
+          "ruse": 1
+        },
+        {
+          "name": "Momo à la viande",
+          "path": 5,
+          "force": 1
         }
-      }
+      ]
     },
-    "phase5" : {
-      "title": "Arrivée",
-      "actions": {
-        "A": {
-          "name": "continuer",
-          "route": "/win"
+    {
+      "id": 5,
+      "title": "Stupa",
+      "texts": [
+        "Vous vous mettez en route. Alors qu’une tempête de neige se lève, vous tomber sur un stupa, un édifice religieux.",
+        "Les stupas sont sacrés, et il ne faut pas les toucher. Or la tempête gronde et vous affaiblis, elle pourrait servir d’abris."
+      ],
+      "actions": [
+        {
+          "name": "Affronter la tempête",
+          "path": "6"
+        },
+        {
+          "name": "S'abriter contre le stupa",
+          "path": "6"
         }
-      },
-      "win": true
+      ]
     },
-    "phase6" : {
-      "title": "Piège mortel",
-      "actions": {
-        "A": {
-          "name": "continuer",
-          "route": "/lose"
+    {
+      "id": 6,
+      "title": "Le village",
+      "texts": [
+        "Vous arrivez dans un petit village. Les gens sont étonnés de vous voir et semblent curieux. ",
+        "Vous repérez une petite famille modeste qui vous fait signe de venir. De l’autre côté, vous remarquez un groupe de voyageurs capuchonnés, qui semblent être chargés en équipement."
+      ],
+      "actions": [
+        {
+          "name": "Rejoindre la famille",
+          "path": 7,
+          "social": 1,
+          "ruse": -1,
+          "condition": {
+            "skill": "social",
+            "condition": "< -3",
+            "true": "/lose",
+            "end-message": "Les gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+          }
+        },
+        {
+          "name": "Rejoindre les voyageurs",
+          "path": 8,
+          "social": -1,
+          "ruse": 1,
+          "condition": {
+            "skill": "social",
+            "condition": "< -3",
+            "true": "/lose",
+            "end-message": "Les gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+          }
         }
-      },
-      "win": false
+      ]
+    },
+    {
+      "id": 7,
+      "title": "La famille",
+      "texts": [
+        "La famille vous raconte l’histoire du village et vous explique leur religion, et vous raconte qu’une secte les ordonne de fournir des gens comme sacrifices.",
+        "Elle vous propose de vous héberger cette nuit, vous racontez vos histoires aux enfants.",
+        "Le lendemain, vous vous sentez bien et accueillis, mais il vous manque toujours quelques ressources pour votre voyage. La famille vous demande de les aider à installer un truc."
+      ],
+      "actions": [
+        {
+          "name": "Accepter et aider",
+          "path": 9,
+          "social": 1,
+          "force": -1
+        },
+        {
+          "name": "Refuser et partir",
+          "path": 9,
+          "social": -1,
+          "force": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Les voyageurs",
+      "texts": [
+        "Les voyageurs vous racontent qu’ils vivent de cambriolages, et ont alors plusieurs ressources sur eux. Ils vous en donnent une part, ils sont fascinés par vos histoires, et vous dormez avec eux à la belle étoile.",
+        "Le lendemain, vous êtes bien paré pour le voyage, mais les gens vous regardent d’un mauvais œil. Les voyageurs vous propose de vous entraîner à vous battre, contre un vieillard."
+      ],
+      "actions": [
+        {
+          "name": "Refuser le combat et partir",
+          "path": 9,
+          "social": 1,
+          "force": -1
+        },
+        {
+          "name": "Accepter le combat, puis partir",
+          "path": 9,
+          "social": -1,
+          "force": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Le pélerin",
+      "texts": [
+        "Vous marchez pendant plusieurs heures. Sur votre chemin, vous croisez un pèlerin endormi.",
+        "Il transporte énormément de choses avec lui, qui pourraient vous être utiles."
+      ],
+      "actions": [
+        {
+          "name": "Voler ses affaires",
+          "path": 10,
+          "social": -1,
+          "ruse": 1
+        },
+        {
+          "name": "Le laisser dormir",
+          "path": 10,
+          "social": 1,
+          "ruse": -1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Le deuxième stupa",
+      "texts": [
+        "Vous êtes arrivé au second stupa, marquant le passage vers les terres sauvages.",
+        "Vous vous souvenez qu’il faut faire une offrande afin d’obtenir la bénédiction des dieux."
+      ],
+      "actions": [
+        {
+          "name": "Faire une offrande",
+          "path": 9,
+          "benediction": 1,
+          "ruse": -1,
+          "condition": {
+            "skill": "ruse",
+            "condition": "< -5",
+            "true": "/lose",
+            "end-message": "Vous n’avez pas réussi à vous équiper correctement pour affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
+          }
+        },
+        {
+          "name": "Ne pas faire d'offrande",
+          "path": 9,
+          "benediction": -1,
+          "ruse": 1,
+          "condition": {
+            "skill": "ruse",
+            "condition": "< -5",
+            "true": "/lose",
+            "end-message": "Vous n’avez pas réussi à vous équiper correctement pour affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
+          }
+        }
+      ]
     }
-  }
+  ],
+  "characters": [
+    {
+      "name": "Loyal",
+      "id": "good",
+      "description": "Vous êtes fort et courageux",
+      "skills": {
+        "force": 1,
+        "ruse": -1,
+        "benediction": 1,
+        "social": -1
+      }
+    },
+    {
+      "name": "Chaotique",
+      "id": "bad",
+      "description": "Vous êtes rusé et indépendant",
+      "skills": {
+        "force": -1,
+        "ruse": 1,
+        "benediction": -1,
+        "social": 1
+      }
+    }
+  ]
 }
