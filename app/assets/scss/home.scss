@@ -1,0 +1,65 @@
+.home__background {
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  // border-top: 30px solid rgb(211, 210, 210);
+  // border-bottom: 30px solid rgb(206, 206, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.home__title {
+  font-size: 80px;
+  letter-spacing: 16px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: white;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+
+  &::before {
+    content: url("../images/chakra.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
+.home__button {
+  position: absolute;
+  top: 75%;
+  z-index: 3;
+  text-transform: uppercase;
+
+  svg {
+    width: 300px;
+    height: 73px;
+
+    rect {
+      width: 97%;
+      height: 85%;
+    }
+  }
+}
+
+.button__text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transform: translate(-50%, -50%);
+}

@@ -1,30 +1,43 @@
 <template>
-  <div class="big-header">
-    <h1>{{ title }}</h1>
-    <p> {{ description }} </p>
-    <router-link class="button" to="/character">Choisir son personnage</router-link>
+  <div class="home__background">
+    <h1 class="home__title">{{ title }}</h1>
+    <div class="home__button">
+      <svg viewBox="0 0 360 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5.5" y="6.5" width="349" height="57" rx="1.5" stroke="white"></rect>
+        <rect x="10.5" y="11.5" width="349" height="57" rx="1.5" stroke="white"></rect>
+        <rect x="0.5" y="0.5" width="349" height="57" rx="1.5" stroke="white"></rect>
+        <rect x="0.5" y="11.5" width="349" height="57" rx="1.5" stroke="white"></rect>
+        <rect x="10.5" y="0.5" width="349" height="57" rx="1.5" stroke="white"></rect>
+      </svg>
+      <router-link to="/character" class="button__text">{{ button }}</router-link>
+    </div>
   </div>
 </template>
 
 <script>
 
+import leveling from '../assets/services/save-level'
+
 export default {
   data() {
     return {
-      title: 'Dharma - ལྷ་ཆོས།',
-      description: 'Le dharma, dans le bouddhisme ou l’hindouisme, est un terme polymorphe désignant les normes et les lois naturelles, une doctrine ou une religion. Il désigne ce qu’il serait la « bonne » chose à faire, ou le « bon » choix, selon sa propre réalité.'
+      title: "Dharma",
+      button: "commencer l'aventure"
     };
-  }, 
-  //clean localstorage (dev mode)
-  created: function () {
-    localStorage.clear()
+  },
+  created() {
+    // localStorage.clear();
   },
   mounted() {
-    //if there is a game save, go to the last reached level
-    let save = localStorage.getItem('save');
+    //restore level session
+    if (leveling.chapter) {
 
-    if(save) {
-      this.$router.push({path: `/game/${save}`});
+      if (leveling.level) {
+        this.$router.push({ path: `/chapter${leveling.chapter}/game/${leveling.level}` });
+
+      } else {
+        this.$router.push({ path: `/chapter${leveling.chapter}` });
+      }
     }
   }
 };
