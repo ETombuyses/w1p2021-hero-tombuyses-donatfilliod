@@ -21,7 +21,6 @@ export default {
       id: this.findChapter().id,
       title: this.findChapter().title,
       signs: this.findChapter().signs
-
     }
   },
   methods: {
