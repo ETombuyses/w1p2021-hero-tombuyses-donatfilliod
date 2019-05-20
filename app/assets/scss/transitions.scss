@@ -43,3 +43,12 @@
     transform: translateX(-100vw);
   }
 }
+
+
+//
+.fadegame-enter-active, .fadegame-leave-active {
+  transition: opacity .5s;
+}
+.fadegame-enter, .fadegame-leave-to {
+  opacity: 0;
+}

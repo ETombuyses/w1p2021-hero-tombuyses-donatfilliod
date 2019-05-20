@@ -1,20 +1,22 @@
 <template>
   <div class="big-header game">
-    <h1>Chapitre {{ chapter.id }}</h1>
-    <div class="story">
-      <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
+    <transition name="fadegame" v-if="transition">
+      <div>
+        <h1>Chapitre {{ chapter.id }}</h1>
+        <div class="story">
+          <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
 
-      <div class="choice">
-        <div
-          v-for="action in level.actions"
-          class="button"
-          :key="action.name"
-          @click="choiceSelected(action)"
-        >{{ action.name }}</div>
+          <div class="choice">
+            <div
+              v-for="action in level.actions"
+              class="button"
+              :key="action.name"
+              @click="choiceSelected(action)"
+            >{{ action.name }}</div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!--  on click, we change the route path-->
+    </transition>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
     return {
       chapter: this.findChapter(),
       level: this.findLevel(),
-      transition: false
+      transition: true
     };
   },
   methods: {
@@ -55,6 +57,7 @@ export default {
     },
 
     changePath(action) {
+      this.transition = !this.transition;
       let nextPath = action.path;
 
       if (action.chapter) {
@@ -116,17 +119,21 @@ export default {
   watch: {
     // on url change, change the level
     "$route.params.id"(to, from) {
-      this.level = this.findLevel();
+      setTimeout(() => {
+        const background = document.querySelector(".game");
+        background.style.backgroundImage = `url(${
+          images[
+            "chapter" +
+              this.$route.params.number +
+              "level" +
+              this.$route.params.id
+          ]
+        })`;
+        this.level = this.findLevel();
 
-      const background = document.querySelector(".game");
-      background.style.backgroundImage = `url(${
-        images[
-          "chapter" +
-            this.$route.params.number +
-            "level" +
-            this.$route.params.id
-        ]
-      })`;
+        this.transition = !this.transition;
+
+      }, 1000);
     }
   }
 };
