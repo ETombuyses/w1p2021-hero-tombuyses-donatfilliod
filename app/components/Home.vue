@@ -1,16 +1,10 @@
 <template>
-  <div class="home__background">
-    <h1 class="home__title">{{ title }}</h1>
-    <div class="home__button">
-      <svg viewBox="0 0 360 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5.5" y="6.5" width="349" height="57" rx="1.5" stroke="white"></rect>
-        <rect x="10.5" y="11.5" width="349" height="57" rx="1.5" stroke="white"></rect>
-        <rect x="0.5" y="0.5" width="349" height="57" rx="1.5" stroke="white"></rect>
-        <rect x="0.5" y="11.5" width="349" height="57" rx="1.5" stroke="white"></rect>
-        <rect x="10.5" y="0.5" width="349" height="57" rx="1.5" stroke="white"></rect>
-      </svg>
-      <router-link to="/character" class="button__text">{{ button }}</router-link>
+  <div class="big-header home">
+     <div class="title">
+      <h1>{{ title }}</h1>
+      <h2>ལྷ་ཆོས།</h2>
     </div>
+      <router-link to="/character" class="button">{{ button }}</router-link>
   </div>
 </template>
 
