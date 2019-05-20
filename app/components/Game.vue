@@ -86,7 +86,6 @@ export default {
   },
 
   mounted() {
-
     leveling.updateLevel(this.level.id)
 
     // display the right background
@@ -98,6 +97,7 @@ export default {
      // on url change, change the level
     '$route.params.id'(to, from) {
       this.level = this.findLevel();
+      
       const background = document.querySelector('.game');
       background.style.backgroundImage = `url(${images['chapter' + this.$route.params.number + 'level' + this.$route.params.id]})`;
     }

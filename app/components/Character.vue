@@ -1,5 +1,8 @@
 <template>
   <div class="big-header">
+    <transition>
+      <div class="pane"></div>
+    </transition>
     <h1>Définissez votre personnalité</h1>
     <div class="characters">
       <div
@@ -31,13 +34,5 @@ export default {
       this.$router.push({ path: "/chapter1" });
     }
   },
-  mounted() {
-    //if there is a game save, go to the last reached level
-    let save = localStorage.getItem("save");
-
-    if (save) {
-      this.$router.push({ path: `/game/${save}` });
-    }
-  }
 };
 </script>

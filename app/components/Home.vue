@@ -26,7 +26,7 @@ export default {
     };
   },
   created() {
-    // localStorage.clear();
+    localStorage.clear();
   },
   mounted() {
     //restore level session

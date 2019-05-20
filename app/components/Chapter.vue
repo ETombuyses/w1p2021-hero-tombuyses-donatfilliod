@@ -25,6 +25,7 @@ export default {
     findChapter() {
       return game.chapters.find(chapter => chapter.id === parseInt(this.$route.params.number));
     },
+    
     play(id) {
       this.$router.push({ path: `/chapter${id}/game/1` });
     },
@@ -33,17 +34,6 @@ export default {
   mounted() {
     leveling.updateChapter(this.id);
 
-    // //restore level session
-    // if (leveling.chapter) {
-
-    //   if (leveling.level) {
-    //     this.$router.push({ path: `/chapter${leveling.chapter}/game/${leveling.level}` });
-
-    //   } else {
-    //     this.$router.push({ path: `/chapter${leveling.chapter}` });
-    //   }
-    // }
-  
     const background = document.querySelector('.chapter');
     background.style.backgroundImage = `url(${images['chapter' + this.$route.params.number]})`;
   }
