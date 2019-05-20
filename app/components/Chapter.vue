@@ -2,7 +2,7 @@
   <div class=" big-header chapter">
     <h2> Chapitre {{ id }} </h2>
     <h3> {{ title }}</h3>
-    <h4> {{ }} </h4>
+    <h4> {{ signs }} </h4>
     <div class="button" @click="play(id)">Commencer</div>
   </div>
 </template>
