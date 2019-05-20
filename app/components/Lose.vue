@@ -29,6 +29,5 @@ export default {
       level: localStorage.getItem('level'),
     }
   }
-    
 };
 </script>
