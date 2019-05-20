@@ -72,7 +72,9 @@ export default {
       if(action.condition) {
         //check the condition
         if (eval(`${characterUpdate.character.skills.find(skill => skill.name === action.condition.skill).value} ${action.condition.condition}`)) {
-          this.$router.push({path: action.condition.true}) 
+          console.log(action.condition);
+          localStorage.setItem('lost', action.condition.endmessage)
+          this.$router.push({path: action.condition.true})
         } else {
           this.changePath(action)
         }

@@ -129,7 +129,7 @@
                 "skill": "social",
                 "condition": "< -3",
                 "true": "/lose",
-                "end-message": "Les gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+                "endmessage": "Les hvjhkhvjhvjh gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
               }
             },
             {
@@ -141,7 +141,7 @@
                 "skill": "social",
                 "condition": "< -3",
                 "true": "/lose",
-                "end-message": "Les gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+                "endmessage": "Les gens voient dazdaz que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
               }
             }
           ]
