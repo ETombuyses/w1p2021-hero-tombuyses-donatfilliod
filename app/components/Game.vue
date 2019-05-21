@@ -1,8 +1,8 @@
 <template>
-  <div class="big-header game">
-    <transition name="fadegame" v-if="transition">
-      <div>
+  <div :class="css">
         <h1>Chapitre {{ chapter.id }}</h1>
+       <img :src="level.img">
+
         <div class="story">
           <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
 
@@ -15,8 +15,8 @@
             >{{ action.name }}</div>
           </div>
         </div>
-      </div>
-    </transition>
+       <audio :src="sound" autoplay loop ref='audio'></audio>
+      <div @click="mute()" :class="soundIcon"></div>
   </div>
 </template>
 
@@ -29,13 +29,16 @@ import game from "../assets/data.json";
 import characterUpdate from "../assets/services/character.js";
 import images from "../assets/chapters-images";
 import leveling from "../assets/services/save-level";
+import sounds from '../assets/sounds.js'
 
 export default {
   data() {
     return {
       chapter: this.findChapter(),
       level: this.findLevel(),
-      transition: true
+      css: "big-header game",
+      sound: sounds.gameSound,
+      soundIcon: "sound-icon"
     };
   },
   methods: {
@@ -57,7 +60,6 @@ export default {
     },
 
     changePath(action) {
-      this.transition = !this.transition;
       let nextPath = action.path;
 
       if (action.chapter) {
@@ -72,24 +74,12 @@ export default {
         leveling.updateLevel(nextPath);
       }
     },
-
-    choiceSelected(action) {
-      //update skills based on the chosen action
-      this.update(action);
+    checkCondition(action) {
 
       //if there is a condition
       if (action.condition) {
         //check the condition
-        if (
-          eval(
-            `${
-              characterUpdate.character.skills.find(
-                skill => skill.name === action.condition.skill
-              ).value
-            } ${action.condition.condition}`
-          )
-        ) {
-          console.log(action.condition);
+        if (eval(`${characterUpdate.character.skills.find(skill => skill.name === action.condition.skill).value} ${action.condition.condition}`)) {
           localStorage.setItem("lost", action.condition.endmessage);
           this.$router.push({ path: action.condition.true });
         } else {
@@ -100,6 +90,27 @@ export default {
       //if there is no condition
       else {
         this.changePath(action);
+      }
+    },
+
+    choiceSelected(action) {
+
+      //update skills based on the chosen action
+      this.update(action);
+
+      this.css = "big-header game fade";
+
+      setTimeout(() => {
+        this.checkCondition(action);
+      }, 1000)
+
+    },
+    mute() {
+      this.$refs.audio.muted = !this.$refs.audio.muted
+      if (this.soundIcon == "sound-icon") {
+        this.soundIcon = "sound-icon muted"
+      } else {
+        this.soundIcon = "sound-icon"
       }
     }
   },
@@ -114,26 +125,24 @@ export default {
         "chapter" + this.$route.params.number + "level" + this.$route.params.id
       ]
     })`;
+    
+    //lower audio volume and restore sound settings
+    this.$refs.audio.volume = 0.5
+    let volume = localStorage.getItem('audio')
+    if (volume) {
+      if (eval(volume) === false) {
+        this.mute()
+      }
+    }
   },
 
   watch: {
     // on url change, change the level
     "$route.params.id"(to, from) {
-      setTimeout(() => {
-        const background = document.querySelector(".game");
-        background.style.backgroundImage = `url(${
-          images[
-            "chapter" +
-              this.$route.params.number +
-              "level" +
-              this.$route.params.id
-          ]
-        })`;
-        this.level = this.findLevel();
-
-        this.transition = !this.transition;
-
-      }, 1000);
+      const background = document.querySelector(".game");
+      background.style.backgroundImage = `url(${images["chapter" + this.$route.params.number + "level" + this.$route.params.id] })`;
+      this.level = this.findLevel();
+      this.css = "big-header game"
     }
   }
 };

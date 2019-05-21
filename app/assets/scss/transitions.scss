@@ -2,14 +2,19 @@
 .pane-enter-active {
   &::after {
     content: '';
+
     display: block;
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     transform: translateX(100vw);
-    background: black;
+    background-image: url('../images/clouds.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -45,10 +50,7 @@
 }
 
 
-//
-.fadegame-enter-active, .fadegame-leave-active {
-  transition: opacity .5s;
-}
-.fadegame-enter, .fadegame-leave-to {
+
+.fade {
   opacity: 0;
 }
