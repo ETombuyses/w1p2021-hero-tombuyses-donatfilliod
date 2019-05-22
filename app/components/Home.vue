@@ -2,7 +2,6 @@
   <div class="big-header home">
     <div class="background"></div>
     <div class="chakra"></div>
-    <canvas id="noise" class="noise"></canvas>
     <div class="vignette"></div>
 
       <h1>{{ title }}</h1>

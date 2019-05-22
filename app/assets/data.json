@@ -9,19 +9,18 @@
           "id": 1,
           "title": "Le crash",
           "texts": [
-            "Vous avez survécu à un crash d’avion en plein milieu des montagnes de l’Himalaya. Vous devez trouver un moyen de rejoindre une ville. Vous vous mettez en route, effrayé, sans affaires.",
-            "Vous voyez alors un survivant à l’agonie, bloqué sous des décombres, qui vous prie de l’aider. Il semble avoir beaucoup d’équipement sur lui, qui pourrait vous être utile."
+            "Au loin, vous repérez des traces de pas formant un petit chemin. Alors que vous vous mettez en route dans un élan desespéré, seul et gelé, vous entendez alors des gémissements. Un autre survivant est bloqué sous des décombres. Couvert de sang et à l'agonie, il vous prie pourtant de lui venir en aide. A ses côtés git un sac à dos, devant contenir de l'équipement qui pourrait vous être utile."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Aider le survivant",
+              "name": "Aider le survivant et laisser le sac",
               "path": 2,
               "social": 1,
               "ruse": -1
             },
             {
-              "name": "Le tuer et lui voler ses affaires",
+              "name": "Achever ses souffrances et prendre le sac",
               "path": 3,
               "social": -1,
               "ruse": 1
@@ -32,22 +31,21 @@
           "id": 2,
           "title": "Traditions",
           "texts": [
-            "Le survivant va rendre son dernier souffle. Avant de mourir, il demande à être enterré.",
-            "Un homme, semblant être un pèlerin de la région, arrive. Il vous explique que les traditions de cette région exigent une sépulture céleste pour les défunts."
+            "Vous dégagez difficilement l'homme des décombres, passez son bras sur vos épaules, et commencez à entamer la marche à deux, malgré ses gémissements de douleur. Quelques temps après, vous regagnez enfin le chemin. Mais l'homme s'effondre, à bout de souffle. L'effort lui a fait perdre beaucoup trop de sang, et le voilà prêt à rejoindre l'autre monde. Dans une ultime parole, il vous remercie, et vous demande de lui offrir la sépulture que sa famille aurait souhaité : l'enterrer. Pourtant, vous savez que les dieux de cette région n'acceptent qu'un seul type de funérailles : l'inhumation céleste."
           ],
           "question": "Que faites-vous ?",
           "actions": [
             {
-              "name": "L’enterrer",
+              "name": "Vous respectez la demande du défunt",
               "path": 4,
               "social": 1,
-              "benediction": -1
+              "piété": -1
             },
             {
-              "name": "Lui faire une Sépulture céleste",
+              "name": "Vous respectez les traditions de la région",
               "path": 4,
               "social": -1,
-              "benediction": 1
+              "piété": 1
             }
           ]
         },
@@ -283,32 +281,32 @@
   ],
   "characters": [
     {
-      "name": "Loyal",
+      "name": "Pèlerin",
       "id": "good",
-      "description": "Vous êtes fort et courageux",
+      "description": "Votre empathie naturelle vous donne un avantage en relationnel, tandis que votre piété vous assurera bonne fortune.",
       "skills": [
         {
-          "name": "force",
-          "value": -1
-        },
-        {
-          "name": "ruse",
-          "value": -1
-        },
-        {
-          "name": "bénédiction",
+          "name": "piété",
           "value": 1
         },
         {
           "name": "social",
           "value": 1
+        },
+        {
+          "name": "force",
+          "value": -1
+        },
+        {
+          "name": "ruse",
+          "value": -1
         }
       ]
     },
     {
-      "name": "Chaotique",
+      "name": "Ancien soldat",
       "id": "bad",
-      "description": "Vous êtes rusé et indépendant",
+      "description": "Votre passé vous a transmis force et courage, ainsi que des compétences basiques en survie.",
       "skills": [
         {
           "name": "force",
@@ -319,7 +317,7 @@
           "value": 1
         },
         {
-          "name": "bénédiction",
+          "name": "piété",
           "value": -1
         },
         {

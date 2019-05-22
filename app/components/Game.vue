@@ -1,22 +1,30 @@
 <template>
   <div :class="css">
-        <h1>Chapitre {{ chapter.id }}</h1>
-       <img :src="level.img">
+    <div class="background"></div>
+    <div class="vignette"></div>
 
-        <div class="story">
-          <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
+    <h1>Chapitre {{ chapter.id }}</h1>
+    <img :src="level.img">
 
-          <div class="choice">
-            <div
-              v-for="action in level.actions"
-              class="button"
-              :key="action.name"
-              @click="choiceSelected(action)"
-            >{{ action.name }}</div>
-          </div>
+    <div class="story">
+      <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
+
+      <div class="choice">
+
+        <div v-for="action in level.actions"
+          class="game__button"
+          :key="action.name"
+          @click="choiceSelected(action)"
+        >
+          {{ action.name }}
+          
         </div>
-       <audio :src="sound" autoplay loop ref='audio'></audio>
-      <div @click="mute()" :class="soundIcon"></div>
+
+      </div>
+
+    </div>
+    <audio :src="sound" autoplay loop ref="audio"></audio>
+    <div @click="mute()" :class="soundIcon"></div>
   </div>
 </template>
 
@@ -29,7 +37,7 @@ import game from "../assets/data.json";
 import characterUpdate from "../assets/services/character.js";
 import images from "../assets/chapters-images";
 import leveling from "../assets/services/save-level";
-import sounds from '../assets/sounds.js'
+import sounds from "../assets/sounds.js";
 
 export default {
   data() {
@@ -75,11 +83,18 @@ export default {
       }
     },
     checkCondition(action) {
-
       //if there is a condition
       if (action.condition) {
         //check the condition
-        if (eval(`${characterUpdate.character.skills.find(skill => skill.name === action.condition.skill).value} ${action.condition.condition}`)) {
+        if (
+          eval(
+            `${
+              characterUpdate.character.skills.find(
+                skill => skill.name === action.condition.skill
+              ).value
+            } ${action.condition.condition}`
+          )
+        ) {
           localStorage.setItem("lost", action.condition.endmessage);
           this.$router.push({ path: action.condition.true });
         } else {
@@ -94,7 +109,6 @@ export default {
     },
 
     choiceSelected(action) {
-
       //update skills based on the chosen action
       this.update(action);
 
@@ -102,15 +116,14 @@ export default {
 
       setTimeout(() => {
         this.checkCondition(action);
-      }, 1000)
-
+      }, 1000);
     },
     mute() {
-      this.$refs.audio.muted = !this.$refs.audio.muted
+      this.$refs.audio.muted = !this.$refs.audio.muted;
       if (this.soundIcon == "sound-icon") {
-        this.soundIcon = "sound-icon muted"
+        this.soundIcon = "sound-icon muted";
       } else {
-        this.soundIcon = "sound-icon"
+        this.soundIcon = "sound-icon";
       }
     }
   },
@@ -119,19 +132,19 @@ export default {
     leveling.updateLevel(this.level.id);
 
     // display the right background
-    const background = document.querySelector(".game");
+    const background = document.querySelector(".game .background");
     background.style.backgroundImage = `url(${
       images[
         "chapter" + this.$route.params.number + "level" + this.$route.params.id
       ]
     })`;
-    
+
     //lower audio volume and restore sound settings
-    this.$refs.audio.volume = 0.5
-    let volume = localStorage.getItem('audio')
+    this.$refs.audio.volume = 0.5;
+    let volume = localStorage.getItem("audio");
     if (volume) {
       if (eval(volume) === false) {
-        this.mute()
+        this.mute();
       }
     }
   },
@@ -139,10 +152,17 @@ export default {
   watch: {
     // on url change, change the level
     "$route.params.id"(to, from) {
-      const background = document.querySelector(".game");
-      background.style.backgroundImage = `url(${images["chapter" + this.$route.params.number + "level" + this.$route.params.id] })`;
+      const background = document.querySelector(".game .background");
+      background.style.backgroundImage = `url(${
+        images[
+          "chapter" +
+            this.$route.params.number +
+            "level" +
+            this.$route.params.id
+        ]
+      })`;
       this.level = this.findLevel();
-      this.css = "big-header game"
+      this.css = "big-header game";
     }
   }
 };

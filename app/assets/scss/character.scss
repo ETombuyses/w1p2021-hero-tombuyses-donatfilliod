@@ -1,16 +1,31 @@
 .character__choice {
 
+  .background {
+    background-image: url("../images/crash3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   h1 {
     position: absolute;
-    top: 5%;
+    top: 3%;
     font-size: 14px;
+    font-family: 'Trajan Pro 3';
   }
 
   .description {
-    margin: 0% 20%;
+    margin: 0% 25%;
     text-align: center;
-    line-height: 1.5em;
-    margin-bottom: 40px;
+    line-height: 1.8em;
+    margin-bottom: 1em;
   }
 
   .characters {
@@ -21,8 +36,10 @@
   }
 
   .character {
-    background: white;
-    color: rgb(129, 129, 129);
+    background: url(../images/paper.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
     padding: 30px;
     border-radius: 5px;
     text-align: center;
@@ -31,6 +48,17 @@
     h2 {
       margin-bottom: 10px;
       text-transform: uppercase;
+      text-shadow: 0 1px 0 #ccc, 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.75);
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      columns : 2;
     }
   }
 
