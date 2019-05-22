@@ -224,7 +224,7 @@
               "name": "Faire une offrande",
               "chapter": 2,
               "path": 1,
-              "benediction": 1,
+              "piété": 1,
               "ruse": -1,
               "condition": {
                 "skill": "ruse",
@@ -237,7 +237,7 @@
               "name": "Ne pas faire d'offrande",
               "chapter": 2,
               "path": 1,
-              "benediction": -1,
+              "piété": -1,
               "ruse": 1,
               "condition": {
                 "skill": "ruse",

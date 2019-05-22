@@ -1,7 +1,6 @@
 <template>
   <div class="big-header home">
     <div class="background"></div>
-    <div class="chakra"></div>
     <div class="vignette"></div>
 
       <h1>{{ title }}</h1>
