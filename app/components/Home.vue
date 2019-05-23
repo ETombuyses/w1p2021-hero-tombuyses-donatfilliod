@@ -1,10 +1,15 @@
 <template>
   <div class="big-header home">
-     <div class="title">
+    <div class="background"></div>
+    <div class="vignette"></div>
+
       <h1>{{ title }}</h1>
       <h2>ལྷ་ཆོས།</h2>
-    </div>
-      <router-link to="/character" class="button">{{ button }}</router-link>
+    <router-link to="/character" class="button">
+      {{ button }}
+      <div class="button__horizontal"></div>
+	    <div class="button__vertical"></div>
+    </router-link>
 
       <audio :src="sound" autoplay loop ref='audio'></audio>
       <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
@@ -40,10 +45,11 @@ export default {
       this.$router.push({ path: `/${localStorage.getItem('end')}`});
       
     } else if (leveling.chapter) {
-      
-      if (leveling.level) {
-        this.$router.push({ path: `/chapter${leveling.chapter}/game/${leveling.level}` });
 
+      if (leveling.level) {
+        this.$router.push({
+          path: `/chapter${leveling.chapter}/game/${leveling.level}`
+        });
       } else {
         this.$router.push({ path: `/chapter${leveling.chapter}` });
       }

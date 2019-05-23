@@ -1,13 +1,13 @@
 //name every const like this for chapter images 
 
-const chapter1 = require('../assets/images/chapter1.jpg');
+const chapter1 = require('../assets/images/chap1.jpg');
 const chapter2 = require('../assets/images/chapter2.jpeg');
 
 
 //name every const like this for level images 
 
-const chapter1level1 = require('../assets/images/survivor.jpg');
-const chapter1level2 = require('../assets/images/help.jpg');
+const chapter1level1 = require('../assets/images/crash2.jpg');
+const chapter1level2 = require('../assets/images/walk2.png');
 const chapter1level3 = require('../assets/images/kill.jpg');
 const chapter1level4 = require('../assets/images/sherpa.jpg');
 const chapter1level5 = require('../assets/images/stupa.jpg');
