@@ -2,7 +2,6 @@
 .pane-enter-active {
   &::after {
     content: '';
-
     display: block;
     position: absolute;
     z-index: 10;
@@ -13,6 +12,7 @@
     transform: translateX(100vw);
     background: url('../images/dharmachakra2.png'), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0));
     background-size: contain;
+    // background-color: black;
     background-repeat: no-repeat;
     background-position: center;
   }

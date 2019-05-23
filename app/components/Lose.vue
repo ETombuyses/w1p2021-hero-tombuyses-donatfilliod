@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header">
+  <div class="big-header fade">
     <h1>Perdu</h1>
     <p> {{ endMessage }} </p>
     <h2> Vos statistiques : </h2>
@@ -61,6 +61,11 @@ export default {
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
+    let component = document.querySelector('.fade') 
+    setTimeout(() => {
+      component.classList.remove('fade')
+    }, 1000)
   }
 };
 </script>

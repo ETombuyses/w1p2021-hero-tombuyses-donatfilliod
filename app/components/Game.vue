@@ -40,7 +40,7 @@ export default {
     return {
       chapter: this.findChapter(),
       level: this.findLevel(),
-      css: "big-header game",
+      css: "big-header game fade",
       sound: sounds.gameSound,
       soundIcon: "sound-icon"
     };
@@ -69,13 +69,19 @@ export default {
       if (action.chapter) {
         this.$router.push({ path: `/chapter${action.chapter}` });
         leveling.updateChapter(action.chapter);
+        
       } else if (nextPath == "win") {
         this.$router.push({ path: "/win" });
       } else if (nextPath == "lose") {
         this.$router.push({ path: "/lose" });
       } else {
-        this.$router.push({ params: { id: nextPath } });
+        this.css = "big-header game fade";
+
+        setTimeout(() => {
+          this.$router.push({ params: { id: nextPath } });
         leveling.updateLevel(nextPath);
+        }, 1000)
+        
       }
     },
     checkCondition(action) {
@@ -108,11 +114,8 @@ export default {
       //update skills based on the chosen action
       this.update(action);
 
-      this.css = "big-header game fade";
-
-      setTimeout(() => {
-        this.checkCondition(action);
-      }, 1000);
+      this.checkCondition(action);
+      
     },
     mute(audio, icon) {
       this.soundIcon = musicParameter.mute(audio, icon);
@@ -121,6 +124,8 @@ export default {
 
   mounted() {
     leveling.updateLevel(this.level.id);
+
+    
 
     // display the right background
     const background = document.querySelector(".game .background");
@@ -133,6 +138,12 @@ export default {
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
     this.$refs.audio.volume = 1;
+
+    let component = document.querySelector('.fade')     
+    setTimeout(() => {
+      component.classList.remove('fade')
+      this.css = "big-header game";
+    }, 1000)
 
   },
 
