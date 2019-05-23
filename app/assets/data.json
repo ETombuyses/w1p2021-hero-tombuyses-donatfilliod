@@ -144,19 +144,17 @@
           "id": 7,
           "title": "La famille",
           "texts": [
-            "La famille vous raconte l’histoire du village et vous explique leur religion, et vous raconte qu’une secte les ordonne de fournir des gens comme sacrifices.",
-            "Elle vous propose de vous héberger cette nuit, vous racontez vos histoires aux enfants.",
-            "Le lendemain, vous vous sentez bien et accueillis, mais il vous manque toujours quelques ressources pour votre voyage. La famille vous demande de les aider à installer un truc."
+            "La famille écoute votre histoire d'un air intéressé. Elle possède peu de moyens, mais vous inviteà dormir dans leur tente pour la nuit. Le lendemain, le village entier vous adresse des sourires. Vous vous préparez à reprendre la route, constatant qu'il vous manque encore quelques ressources pour votre voyage. Avant de partir, la famille vous demande de leur rendre service, en les aidant à réparer une tente défectueuse.",
           ],
           "actions": [
             {
-              "name": "Accepter et aider",
+              "name": "Accepter et les aider",
               "path": 9,
               "social": 1,
               "force": -1
             },
             {
-              "name": "Refuser et partir",
+              "name": "Refuser et partir immédiatement",
               "path": 9,
               "social": -1,
               "force": 1
@@ -167,18 +165,17 @@
           "id": 8,
           "title": "Les voyageurs",
           "texts": [
-            "Les voyageurs vous racontent qu’ils vivent de cambriolages, et ont alors plusieurs ressources sur eux. Ils vous en donnent une part, ils sont fascinés par vos histoires, et vous dormez avec eux à la belle étoile.",
-            "Le lendemain, vous êtes bien paré pour le voyage, mais les gens vous regardent d’un mauvais œil. Les voyageurs vous propose de vous entraîner à vous battre, contre un vieillard."
+            "Les parias vous racontent qu’ils vivent de petites rapines, et ont alors plusieurs ressources sur eux, qu'ils vous offrent volontiers en échange de vos histoires. Le lendemain, après une nuit sous leur tente, vous êtes satisfait de vos provisions pour le voyage, mais les habitants du village vous regardent d'un mauvais oeil. Avant de partir, les parias proposent de vous enseigner une technique de défense au corps à corps... contre un vieillard.",
           ],
           "actions": [
             {
-              "name": "Refuser le combat et partir",
+              "name": "Refuser l'entraînement déloyal",
               "path": 9,
               "social": 1,
               "force": -1
             },
             {
-              "name": "Accepter le combat, puis partir",
+              "name": "Accepter l'entraînement",
               "path": 9,
               "social": -1,
               "force": 1
@@ -189,8 +186,7 @@
           "id": 9,
           "title": "Le pélerin",
           "texts": [
-            "Vous marchez pendant plusieurs heures. Sur votre chemin, vous croisez un pèlerin endormi.",
-            "Il transporte énormément de choses avec lui, qui pourraient vous être utiles."
+            "Vous quittez le village et continuer de suivre la route indiquée par le sherpa. Vous marchez pendant plusieurs heures, à travers le froid et la faim qui persiste encore. Au bout de plusieurs heures, vous repérez un pèlerin, endormi au bord du chemin. Il semble transporter énormément de choses avec lui.",
           ],
           "actions": [
             {
@@ -211,8 +207,7 @@
           "id": 10,
           "title": "Le deuxième stupa",
           "texts": [
-            "Vous êtes arrivé au second stupa, marquant le passage vers les terres sauvages.",
-            "Vous vous souvenez qu’il faut faire une offrande afin d’obtenir la bénédiction des dieux."
+            "Vous êtes arrivé au second stupa, marquant le passage vers les terres sauvages. Vous vous souvenez que la tradition exige une offrande à ce passage, afin d’obtenir la bénédiction des dieux.",
           ],
           "actions": [
             {
@@ -223,9 +218,9 @@
               "ruse": -1,
               "condition": {
                 "skill": "ruse",
-                "condition": "< -5",
+                "condition": "< -4",
                 "true": "/lose",
-                "end-message": "Vous n’avez pas réussi à vous équiper correctement pour affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
+                "endmessage": "Vous ne possédez pas assez d'équipement pour pouvoir affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
               }
             },
             {
@@ -236,9 +231,9 @@
               "ruse": 1,
               "condition": {
                 "skill": "ruse",
-                "condition": "< -5",
+                "condition": "< -4",
                 "true": "/lose",
-                "end-message": "Vous n’avez pas réussi à vous équiper correctement pour affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
+                "endmessage": "Vous ne possédez pas assez d'équipement pour pouvoir affronter les terres sauvages. Des heures de marche plus tard, vous mourrez de faim et de froid."
               }
             }
           ]
