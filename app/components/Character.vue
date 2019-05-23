@@ -21,24 +21,38 @@
         </ul>
       </div>
     </div>
+    <audio :src="sound" autoplay loop ref='audio'></audio>
+      <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
   </div>
 </template>
 
 <script>
-import characterUpdater from "../assets/services/character.js";
-import game from "../assets/data.json";
+import characterUpdater from "../assets/services/character.js"
+import game from "../assets/data.json"
+import sounds from '../assets/sounds.js'
+import musicParameter from '../assets/services/audio'
+
 
 export default {
   data() {
     return {
-      characters: game.characters
+      characters: game.characters,
+      sound: sounds.characterSound,
+      soundIcon: "sound-icon"
     };
   },
   methods: {
     save(character) {
       characterUpdater.save(character);
       this.$router.push({ path: "/chapter1" });
+    },
+    mute(audio, icon) {
+      this.soundIcon = musicParameter.mute(audio, icon);      
     }
   },
+  mounted() {
+    //restore sound settings
+    this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+  }
 };
 </script>
