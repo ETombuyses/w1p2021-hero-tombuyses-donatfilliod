@@ -9,7 +9,7 @@
           "id": 1,
           "title": "Le crash",
           "texts": [
-            "Au loin, vous repérez des traces de pas formant un petit chemin. Alors que vous vous mettez en route dans un élan desespéré, seul et gelé, vous entendez alors des gémissements. Un autre survivant est bloqué sous des décombres. Couvert de sang et à l'agonie, il vous prie pourtant de lui venir en aide. A ses côtés git un sac à dos, devant contenir de l'équipement qui pourrait vous être utile."
+            "Au loin, vous repérez des traces de pas formant un petit chemin. Alors que vous vous mettez en route dans un élan desespéré, seul et gelé, vous entendez alors des gémissements. Un autre survivant est bloqué sous des décombres. Couvert de sang et à l'agonie, il vous prie pourtant de lui venir en aide. A ses côtés git un sac en tissu, devant contenir de l'équipement qui pourrait vous être utile."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -53,19 +53,18 @@
           "id": 3,
           "title": "Assassin",
           "texts": [
-            "Vous achevez le survivant à l'aide d'un rocher et vous décidez de prendre son équipement.",
-            "Vous hésitez à lui prendre ses vêtements."
+            "En le rassurant, vous achever l'homme en serrant sa gorge. Dès que ses paupières se ferment, vous vous munissez du contenu du sac. Il y a là plusieurs ressources allant pouvoir vous protéger du froid et de la faim. L'homme, lui, porte également plusieurs couches de vêtements. Le déshabiller serait plus déshonorant pour sa mémoire, mais pourrait vous offrir une protection supplémentaire contre ce climat difficile.",
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Lui prendre ses vêtements",
+              "name": "Prendre ses vêtements",
               "path": 4,
               "social": -1,
               "ruse": 1
             },
             {
-              "name": "Lui laisser ses vêtements",
+              "name": "Laisser ses vêtements",
               "path": 4,
               "social": 1,
               "ruse": -1
@@ -76,9 +75,7 @@
           "id": 4,
           "title": "Le sherpa",
           "texts": [
-            "L’homme s’avère être un sherpa, il connaît bien les montagnes.",
-            "Vous lui raconter votre situation. Il vous indique le chemin pour se rendre à la ville la plus proche.",
-            " Il n’a pas grand-chose pour vous aider, mais il peut vous proposer :"
+            "Sans plus attendre, vous rejoignez le chemin. Vous marchez sur quelques kilomètres, avant de croiser par miracle un homme, accompagné de deux yacks. Il s'agit d'un sherpa, il connaît bien ses montagnes. Vous vous empressez de lui demander secours. Il vous indique la direction à prendre pour rejoindre la ville la plus proche. Laquelle ? ' Celle où le Karma vous guidera ', répondit-il. Il est en pèlerinage, et n'a pas beaucoup de choses à vous offrir, hormis du thé au beurre ' pour clarifier votre esprit perturbé ', ou un momo à la viande, ' pour recouvrer votre énergie '.",
           ],
           "actions": [
             {
@@ -97,8 +94,7 @@
           "id": 5,
           "title": "Stupa",
           "texts": [
-            "Vous vous mettez en route. Alors qu’une tempête de neige se lève, vous tomber sur un stupa, un édifice religieux.",
-            "Les stupas sont sacrés, et il ne faut pas les toucher. Or la tempête gronde et vous affaiblis, elle pourrait servir d’abris."
+            "Suivant les indications, vous vous mettez en route. Alors qu'une tempête de neige se lève, vous glaçant les membres, vous tomber sur un stupa, un édifice religieux. Les stupas sont sacrés, et il est interdit de les toucher. Or, le blizzard gronde, et il pourrait vous servir d'abris.",
           ],
           "actions": [
             {
@@ -115,8 +111,7 @@
           "id": 6,
           "title": "Le village",
           "texts": [
-            "Vous arrivez dans un petit village. Les gens sont étonnés de vous voir et semblent curieux. ",
-            "Vous repérez une petite famille modeste qui vous fait signe de venir. De l’autre côté, vous remarquez un groupe de voyageurs capuchonnés, qui semblent être chargés en équipement."
+            "Vous arrivez dans un petit village de nomades. Les gens sont étonnés de vous voir et vous fixent du regard. Un peu plus loin, vous remarquez une petite famille modeste, qui vous fait signe de venir. A l'écart, vous voyez un groupe de parias assez louches, mais semblant transporter beaucoup d'équipement avec eux.",
           ],
           "actions": [
             {
@@ -128,11 +123,11 @@
                 "skill": "social",
                 "condition": "< -3",
                 "true": "/lose",
-                "endmessage": "Les hvjhkhvjhvjh gens voient que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+                "endmessage": "Les habitants du village voient dans vos yeux qu'il manque une lueur de bienveillance, et vous jugent dangereux. Sans que vous ne puissiez rien faire, une foule s'organise autour de vous. Vous recevez alors un violent coup à la tête, puis vous sombrez dans le noir complet."
               }
             },
             {
-              "name": "Rejoindre les voyageurs",
+              "name": "Rejoindre les parias",
               "path": 8,
               "social": -1,
               "ruse": 1,
@@ -140,7 +135,7 @@
                 "skill": "social",
                 "condition": "< -3",
                 "true": "/lose",
-                "endmessage": "Les gens voient dazdaz que vous n’êtes pas bienveillant, et vous jugent dangereux. Vous vous faites capturer"
+                "endmessage": "Les habitants du village voient dans vos yeux qu'il manque une lueur de bienveillance, et vous jugent dangereux. Sans que vous ne puissiez rien faire, une foule s'organise autour de vous. Vous recevez alors un violent coup à la tête, puis vous sombrez dans le noir complet."
               }
             }
           ]
