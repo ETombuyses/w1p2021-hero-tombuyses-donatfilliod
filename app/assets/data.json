@@ -243,29 +243,304 @@
     {
       "id": 2,
       "title": "Les montagnes",
+      "signs": "རི",
       "levels": [
         {
           "id": 1,
-          "title": "Le crash",
+          "title": "Le Phurba",
           "texts": [
-            "test chapitre 2"
+            "Vous marchez pendant des heures à travers le chemin de montagne, traversant les terres sauvages. Vous êtes heureux d’être arrivés jusqu’ici, mais vous vous demandez encore si vous aviez fait les bons choix. Sur la route, vous remarquez au sol, abandonné dans la neige, une dague de Phurba. Sa lame, pourtant censée être sacrée, est encore entachée de quelques gouttes de sang, ayant sûrement dû servir à un acte malveillant ou blasphématoire."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "test chapitre",
+              "name": "Vous prenez la dague",
               "path": 2,
-              "social": 1,
-              "ruse": -1
+              "force": 1,
+              "piété": -1
             },
             {
-              "name": "test chapitre",
+              "name": "Vous enterrer la dague",
               "path": 3,
-              "social": -1,
+              "piété": -1,
+              "force": 1
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Le vol",
+          "texts": [
+            "Votre nouvelle arme vous donnera un avantage s’il advenait pour vous d’utiliser votre force. Vous entendez quelqu’un arriver, et ce dernier réclame sa dague, d’un air menaçant. Il a l’air d’ailleurs, chargé en équipement."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Vous le tuez",
+              "path": 4,
+              "ruse": 1,
+              "piété": -1
+            },
+            {
+              "name": "Vous lui proposez de l'argent",
+              "path": 4,
+              "piété": -1,
               "ruse": 1
             }
           ]
+        },
+        {
+          "id": 3,
+          "title": "Le larçin",
+          "texts": [
+            "Alors que vous venez d’enfouir l’arme, vous entendez quelqu’un derrière vous. La personne vous explique avoir perdu son poignard, et vous demande si vous l’aviez vu."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Vous lui rendez la dague",
+              "path": 4,
+              "social": 1,
+              "piété": -1
+            },
+            {
+              "name": "Vous mentez et ne lui donnez pas ",
+              "path": 4,
+              "social": -1,
+              "piété": 1
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "L'escalade",
+          "texts": [
+            "Vous arrivez à un passage extrêmement glissant. Vous pourriez compter sur vos forces, ou bien sur l’équipement que vous posséder pour escalader cette paroi."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Forcer et monter à main nue",
+              "path": 5,
+              "ruse": 1,
+              "force": -1
+            },
+            {
+              "name": "S’aider de son équipement",
+              "path": 5,
+              "ruse": -1,
+              "social": 1
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Le lac sacré",
+          "texts": [
+            "Vous êtes arrivé à un lac sacré. Ses eaux sont magnifiques et, comme dans un rêve, une barque est attachée sur la berge. Vous savez que traverser ses eaux seraient considéré comme un blasphème. Vous pouvez contourner le lac, mais cela vous affaiblira grandement."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Traverser le lac ",
+              "path": 6,
+              "force": 1,
+              "piété": -1,
+              "condition": {
+                "skill": "piété",
+                "condition": "< -5",
+                "true": "/lose",
+                "endmessage": "Le lac sait que vous êtes impurs et vous noie."
+              }
+            },
+            {
+              "name": "Contourner le lac",
+              "path": 6,
+              "force": -1,
+              "piété": 1,
+              "condition": {
+                "skill": "piété",
+                "condition": "< -5",
+                "true": "/lose",
+                "endmessage": "Le lac sait que vous êtes impurs et vous noie."
+              }
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Drapeaux de prières",
+          "texts": [
+            "Vous arrivez au troisième stupa, lui-même orné de drapeaux de prières, accroché à des câbles dans la roche. Vous pouvez vous aider en tirant dessus pour économiser vos forces."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "S'accrocher",
+              "path": 7,
+              "force": 1,
+              "piété": -1
+            },
+            {
+              "name": "Marcher",
+              "path": 7,
+              "force": -1,
+              "piété": 1
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Avalanche",
+          "texts": [
+            "Malheureusement, une petite avalanche se déclenche. Vous devez courir le plus vite possible hors d’atteinte, mais votre sac vous ralenti."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Se débarrasser du sac ",
+              "path": 8,
+              "force": 1,
+              "ruse": -1
+            },
+            {
+              "name": "Courir avec le sac",
+              "path": 8,
+              "force": -1,
+              "ruse": 1
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "La cabane",
+          "texts": [
+            "La nuit tombe et vous sentez le vent se lever. Par chance, vous repérez une cabane abandonnée où il ferait bon de s’y abriter pour le soir. L’intérieur regorge de belles choses. Il vous est possible de profiter de l’hospitalité des lieux, mais également de vous procurez des richesses."
+          ],
+          "question": "Que faites-vous ?",
+          "actions": [
+            {
+              "name": "Voler la cabane",
+              "path": 9,
+              "ruse": 1,
+              "social": -1
+            },
+            {
+              "name": "Laisser les affaires",
+              "path": 9,
+              "social": 1,
+              "ruse": -1
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "L'attaque nocturne'",
+          "texts": [
+            "Vous vous faites attaquer par un animal sauvage.",
+          ],
+          "actions": [
+            {
+              "name": "Attaquer frontalement",
+              "chapter": 3,
+              "path": 1,
+              "ruse": 1,
+              "force": -1,
+              "condition": {
+                "skill": "force",
+                "condition": "< -8",
+                "true": "/lose",
+                "endmessage": "L'animal vous tue."
+              }
+            },
+            {
+              "name": "Tenter de fuir",
+              "chapter": 3,
+              "path": 1,
+              "ruse": -1,
+              "force": 1,
+              "condition": {
+                "skill": "force",
+                "condition": "> -15",
+                "true": "/lose",
+                "endmessage": "L'animal vous ratrappe et vous tue."
+              }
+            }
+          ]
         }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Les dieux",
+      "signs": "ཆོས་ལུགས།",
+      "levels": [
+        {
+          "id": 1,
+          "title": "L'entrée de la grotte",
+          "texts": [
+            "Vous repartez à l’aube, blessé. L’animal est mort, par miracle, vous sentez que vos réflexes ont été accrus. Curieux, vous recherchez d’où est-ce que l’animal a bien pu venir. Vos repérez une faille dans la roche, menant à une grotte remplie de stalactites. Sous la glace, vous apercevez quelques visages de statues en pierre. Le chemin descend dans un gouffre, avec lequel il serait possible de descendre en rappel."
+          ],
+          "question": "Que choisissez-vous ?",
+          "actions": [
+            {
+              "name": "Descendre en rappel",
+              "path": 2,
+              "force": 1,
+              "ruse": -1
+            },
+            {
+              "name": "Descendre avec la force de vos bras",
+              "path": 3,
+              "force": -1,
+              "ruse": 1
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Le temple perdu",
+          "texts": [
+            "Vous avez découvert un palais enterré. Il regorge d’anciennes inscriptions et de statues. Vous trouvez également de nombreux trésors."
+          ],
+          "question": "Que choisissez-vous ?",
+          "actions": [
+            {
+              "name": "Prendre les trésors ",
+              "path": 3,
+              "ruse": 1,
+              "piété": -1
+            },
+            {
+              "name": "Etudier les inscriptions",
+              "path": 3,
+              "ruse": -1,
+              "piété": 1
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "La seule issue",
+          "texts": [
+            "Malheureusement, au moment de remonter, votre corde lâche. Il ne vous reste qu’une seule issue, une minuscule faille qui vous forcerait à abandonner votre équipement."
+          ],
+          "question": "Que choisissez-vous ?",
+          "actions": [
+            {
+              "name": "Tenter de passer par la faille",
+              "path": 4,
+              "ruse": -1,
+              "piété": 1,
+              "condition": {
+                "skill": "ruse",
+                "condition": "< -5",
+                "true": "/lose",
+                "endmessage": "Vous n'avez plus aucun équipement."
+              }
+            }
+          ]
+        },
       ]
     }
   ],
