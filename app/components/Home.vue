@@ -1,15 +1,15 @@
 <template>
-  <div class="big-header home">
+  <div class="big-header home fade">
     <div class="background"></div>
     <div class="vignette"></div>
 
       <h1>{{ title }}</h1>
       <h2>ལྷ་ཆོས།</h2>
-    <router-link to="/character" class="button">
-      {{ button }}
+      <div @click="changeRoute()" class="button">
+        {{ button }}
       <div class="button__horizontal"></div>
 	    <div class="button__vertical"></div>
-    </router-link>
+    </div>
 
       <audio :src="sound" autoplay loop ref='audio'></audio>
       <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
@@ -35,6 +35,9 @@ export default {
   methods: {
     mute(audio, icon) {
       this.soundIcon = musicParameter.mute(audio, icon);
+    },
+    changeRoute() {
+      this.$router.push({path: '/character'});
     }
   },
 
@@ -57,6 +60,11 @@ export default {
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
+    let component = document.querySelector('.fade') 
+    setTimeout(() => {
+      component.classList.remove('fade')
+    }, 1000)
   }
 };
 </script>

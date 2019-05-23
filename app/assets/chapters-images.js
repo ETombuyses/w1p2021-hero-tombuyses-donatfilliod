@@ -3,7 +3,6 @@
 const chapter1 = require('../assets/images/chap1.jpg');
 const chapter2 = require('../assets/images/himalaya.png');
 
-
 //name every const like this for level images 
 
 const chapter1level1 = require('../assets/images/crash2.2.jpg');
@@ -17,8 +16,9 @@ const chapter1level8 = require('../assets/images/camp.jpg');
 const chapter1level9 = require('../assets/images/alone2.jpg');
 const chapter1level10 = require('../assets/images/stupa.jpeg');
 
+const character = require('../assets/images/crash3.jpg');
 
-export default { chapter1, chapter2, chapter1level1, chapter1level2, chapter1level3, chapter1level4, chapter1level5, chapter1level6, chapter1level7, chapter1level8, chapter1level9, chapter1level10 };
+export default { character, chapter1, chapter2, chapter1level1, chapter1level2, chapter1level3, chapter1level4, chapter1level5, chapter1level6, chapter1level7, chapter1level8, chapter1level9, chapter1level10 };
 
 
 /* autre méthode : */

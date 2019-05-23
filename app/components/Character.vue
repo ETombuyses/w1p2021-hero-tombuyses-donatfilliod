@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header character__choice">
+  <div class="big-header character__choice fade">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -42,7 +42,7 @@ export default {
     return {
       characters: game.characters,
       sound: sounds.characterSound,
-      soundIcon: "sound-icon"
+      soundIcon: "sound-icon",
     };
   },
   methods: {
@@ -57,6 +57,11 @@ export default {
   mounted() {
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
+    let component = document.querySelector('.fade') 
+    setTimeout(() => {
+      component.classList.remove('fade')
+    }, 1000)
   }
 };
 </script>

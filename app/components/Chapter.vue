@@ -1,5 +1,5 @@
 <template>
-  <div class=" big-header chapter">
+  <div class=" big-header chapter fade">
     <div class="background"></div>
     <div class="vignette"></div>
     <h2> Chapitre {{ id }} </h2>
@@ -33,7 +33,7 @@ export default {
       title: this.findChapter().title,
       signs: this.findChapter().signs,
       sound: sounds.chapterSound,
-      soundIcon: "sound-icon"
+      soundIcon: "sound-icon",
     }
   },
   methods: {
@@ -51,13 +51,17 @@ export default {
 
   },
   mounted() {
-    leveling.updateChapter(this.id);
-
-    const background = document.querySelector('.chapter .background');
-    background.style.backgroundImage = `url(${images['chapter' + this.$route.params.number]})`;
+    // leveling.updateChapter(this.id);
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
+    let component = document.querySelector('.fade') 
+
+    
+    setTimeout(() => {
+      component.classList.remove('fade')
+    }, 1000)
 
   }
 }

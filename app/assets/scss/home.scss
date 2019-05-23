@@ -1,4 +1,6 @@
 .home {
+  transition: opacity 1s;
+
   .background {
     background-image: url("../images/homescreen.gif");
     opacity: 1;

@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header lose">
+  <div class="big-header lose fade">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -74,10 +74,12 @@ export default {
     localStorage.setItem("end", "lose");
 
     //restore sound settings
-    this.soundIcon = musicParameter.restoreAudioSettings(
-      this.$refs.audio,
-      this.soundIcon
-    );
+    this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
+    let component = document.querySelector('.fade') 
+    setTimeout(() => {
+      component.classList.remove('fade')
+    }, 1000)
   }
 };
 </script>
