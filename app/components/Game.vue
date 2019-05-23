@@ -16,7 +16,7 @@
           </div>
         </div>
        <audio :src="sound" autoplay loop ref='audio'></audio>
-      <div @click="mute()" :class="soundIcon"></div>
+      <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
   </div>
 </template>
 
@@ -25,11 +25,12 @@
 <script>
 /*import data.json file */
 
-import game from "../assets/data.json";
-import characterUpdate from "../assets/services/character.js";
-import images from "../assets/chapters-images";
-import leveling from "../assets/services/save-level";
+import game from "../assets/data.json"
+import characterUpdate from "../assets/services/character.js"
+import images from "../assets/chapters-images"
+import leveling from "../assets/services/save-level"
 import sounds from '../assets/sounds.js'
+import musicParameter from '../assets/services/audio'
 
 export default {
   data() {
@@ -105,13 +106,8 @@ export default {
       }, 1000)
 
     },
-    mute() {
-      this.$refs.audio.muted = !this.$refs.audio.muted
-      if (this.soundIcon == "sound-icon") {
-        this.soundIcon = "sound-icon muted"
-      } else {
-        this.soundIcon = "sound-icon"
-      }
+    mute(audio, icon) {
+      this.soundIcon = musicParameter.mute(audio, icon);
     }
   },
 
@@ -126,14 +122,10 @@ export default {
       ]
     })`;
     
-    //lower audio volume and restore sound settings
-    this.$refs.audio.volume = 0.5
-    let volume = localStorage.getItem('audio')
-    if (volume) {
-      if (eval(volume) === false) {
-        this.mute()
-      }
-    }
+    //restore sound settings
+    this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+    this.$refs.audio.volume = 1;
+
   },
 
   watch: {
