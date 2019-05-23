@@ -1,31 +1,63 @@
 .home {
-    background-image: url('../images/homescreen.gif');
-
-  .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  
-      * {
-          text-align: center;
-          font-size: 120px;
-      }
-  
-      h1 {
-          text-transform: uppercase;
-          letter-spacing: 0.2em;
-      }
-  
-      h2 {
-          transform: translateY(-30%);
-      }
+  .background {
+    background-image: url("../images/homescreen.gif");
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  
+
+  .vignette {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 150px 20px black;
+    mix-blend-mode: multiply;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 120px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+      0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.61), 0 0 5px rgba(0, 0, 0, 0.52),
+      0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.75);
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: "Trajan Pro 3";
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 120px;
+    margin-top: 6%;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+      0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.61), 0 0 5px rgba(0, 0, 0, 0.52),
+      0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.75);
+  }
+
   .button {
-      position: absolute;
-      bottom: 20%;
+    position: absolute;
+    bottom: 12%;
+    text-transform: uppercase;
   }
-
 }
-

@@ -1,9 +1,15 @@
 <template>
   <div class=" big-header chapter">
+    <div class="background"></div>
+    <div class="vignette"></div>
     <h2> Chapitre {{ id }} </h2>
     <h3> {{ title }}</h3>
     <h4> {{ signs }} </h4>
-    <div class="button" @click="play(id)">Commencer</div>
+    <div class="button" @click="play(id)">
+      Commencer
+      <div class="button__horizontal"></div>
+	    <div class="button__vertical"></div>
+    </div>
 
      <audio :src="sound" autoplay loop ref='audio'></audio>
       <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
@@ -47,11 +53,12 @@ export default {
   mounted() {
     leveling.updateChapter(this.id);
 
-    const background = document.querySelector('.chapter');
+    const background = document.querySelector('.chapter .background');
     background.style.backgroundImage = `url(${images['chapter' + this.$route.params.number]})`;
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
+
   }
 }
 </script>

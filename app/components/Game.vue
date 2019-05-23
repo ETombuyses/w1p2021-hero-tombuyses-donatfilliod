@@ -1,22 +1,25 @@
 <template>
   <div :class="css">
-        <h1>Chapitre {{ chapter.id }}</h1>
-       <img :src="level.img">
+    <div class="background"></div>
+    <div class="vignette"></div>
 
-        <div class="story">
-          <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
+    <h1>Chapitre {{ chapter.id }}</h1>
+    <img :src="level.img">
 
-          <div class="choice">
-            <div
-              v-for="action in level.actions"
-              class="button"
-              :key="action.name"
-              @click="choiceSelected(action)"
-            >{{ action.name }}</div>
-          </div>
-        </div>
-       <audio :src="sound" autoplay loop ref='audio'></audio>
-      <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
+    <div class="story">
+      <p class="description" v-for="text in level.texts" :key="text.id">{{ text }}</p>
+
+      <div class="choice">
+        <div
+          v-for="action in level.actions"
+          class="game__button"
+          :key="action.name"
+          @click="choiceSelected(action)"
+        >{{ action.name }}</div>
+      </div>
+    </div>
+    <audio :src="sound" autoplay loop ref="audio"></audio>
+    <div @click="mute($refs.audio, soundIcon)" :class="soundIcon"></div>
   </div>
 </template>
 
@@ -76,11 +79,18 @@ export default {
       }
     },
     checkCondition(action) {
-
       //if there is a condition
       if (action.condition) {
         //check the condition
-        if (eval(`${characterUpdate.character.skills.find(skill => skill.name === action.condition.skill).value} ${action.condition.condition}`)) {
+        if (
+          eval(
+            `${
+              characterUpdate.character.skills.find(
+                skill => skill.name === action.condition.skill
+              ).value
+            } ${action.condition.condition}`
+          )
+        ) {
           localStorage.setItem("lost", action.condition.endmessage);
           this.$router.push({ path: action.condition.true });
         } else {
@@ -95,7 +105,6 @@ export default {
     },
 
     choiceSelected(action) {
-
       //update skills based on the chosen action
       this.update(action);
 
@@ -103,8 +112,7 @@ export default {
 
       setTimeout(() => {
         this.checkCondition(action);
-      }, 1000)
-
+      }, 1000);
     },
     mute(audio, icon) {
       this.soundIcon = musicParameter.mute(audio, icon);
@@ -115,7 +123,7 @@ export default {
     leveling.updateLevel(this.level.id);
 
     // display the right background
-    const background = document.querySelector(".game");
+    const background = document.querySelector(".game .background");
     background.style.backgroundImage = `url(${
       images[
         "chapter" + this.$route.params.number + "level" + this.$route.params.id
@@ -131,10 +139,17 @@ export default {
   watch: {
     // on url change, change the level
     "$route.params.id"(to, from) {
-      const background = document.querySelector(".game");
-      background.style.backgroundImage = `url(${images["chapter" + this.$route.params.number + "level" + this.$route.params.id] })`;
+      const background = document.querySelector(".game .background");
+      background.style.backgroundImage = `url(${
+        images[
+          "chapter" +
+            this.$route.params.number +
+            "level" +
+            this.$route.params.id
+        ]
+      })`;
       this.level = this.findLevel();
-      this.css = "big-header game"
+      this.css = "big-header game";
     }
   }
 };

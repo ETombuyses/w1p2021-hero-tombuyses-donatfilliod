@@ -24,8 +24,8 @@ class Character {
       this.character.skills.find(skill => skill.name === 'force').value += action.force;
     }
 
-    if (action.benediction) {
-      this.character.skills.find(skill => skill.name === 'bénédiction').value += action.benediction;
+    if (action.piété) {
+      this.character.skills.find(skill => skill.name === 'piété').value += action.piété;
     }
 
     //update the character in the local storage
