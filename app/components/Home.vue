@@ -49,6 +49,9 @@ export default {
     const characterImage = new Image();
     characterImage.src = require("../assets/images/crash3.jpg")
 
+    const wheelImage = new Image();
+    wheelImage.src = require("../assets/images/dharmachakra2.png")
+
     //restore level session
 
     if (localStorage.getItem('end')) {
