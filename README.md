@@ -49,3 +49,8 @@ Le jeu repose donc sur le principe du Karma, ou de l’effet papillon, qui dési
 | Multimédia | L'expérience présente une vidéo ou plus | oui |
 | Multimédia | L'expérience présente un audio ou plus | oui |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | oui |
+
+
+![Chapitre 1](http://zupimages.net/viewer.php?id=19/21/rj4l.jpg)
+![Chapitre 2](http://zupimages.net/viewer.php?id=19/21/8lk4.jpg)
+![Chapitre 3](http://zupimages.net/viewer.php?id=19/21/zaul.jpg)
