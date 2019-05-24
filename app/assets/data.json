@@ -742,7 +742,7 @@
                 "skill": "piété",
                 "condition": "< -1",
                 "true": "/lose",
-                "endmessage": "Vous ne pouvez pas passer"
+                "endmessage": "Votre piété a souffert durant le long de votre voyage. Peut-être l'aviez-vous oublié ? Ou était-ce volontaire ? Vous ne vous en souvenez plus. Vous sentez votre corps entier partir, comme aspiré par la lumière des portes qui à votre passage, explose comme une énergie furieuse. Vous vous dématérialiser, sous les yeux impassibles des pèlerins et des croyants."
               }
             }
           ]
