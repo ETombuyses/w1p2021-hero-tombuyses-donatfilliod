@@ -139,7 +139,6 @@ export default {
     
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
-    this.$refs.audio.volume = 1;
 
     let component = document.querySelector('.fade')     
     setTimeout(() => {
