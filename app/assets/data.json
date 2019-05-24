@@ -473,7 +473,7 @@
           "id": 1,
           "title": "L'entrée de la grotte",
           "texts": [
-            "Vous repartez à l’aube, blessé. L’animal est mort, par miracle, vous sentez que vos réflexes ont été accrus. Curieux, vous recherchez d’où est-ce que l’animal a bien pu venir. Vos repérez une faille dans la roche, menant à une grotte remplie de stalactites. Sous la glace, vous apercevez quelques visages de statues en pierre. Le chemin descend dans un gouffre, avec lequel il serait possible de descendre en rappel."
+            "Votre combat contre l'ours a été remporté, par miracle, non sans vous laisser de profondes blessures. Vous sentez cependant que vos réflexes ont été accrus. Suspicieux, vous recherchez d’où est-ce que l’animal a bien pu venir pour pénétrer dans la cabane. Au fond de la piève, vous repérez un grand dans la roche, menant à une grotte. Vous vous engagez à l'intérieur. Les parois rocheuses sont recouvertes de glace, renfermant les visages de divinités locales, perdues à jamais. Plus loin, vous tomber sur un énorme gouffre s'ouvrant en un trou béant surplombant un magnifique temple abandonné. Vous pourriez descendre en comptant sur vos aptitudes en escalade, ou bien économiser vos forces et sacrifier encore un peu d'équipement pour descendre en rappel."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -495,18 +495,18 @@
           "id": 2,
           "title": "Le temple perdu",
           "texts": [
-            "Vous avez découvert un palais enterré. Il regorge d’anciennes inscriptions et de statues. Vous trouvez également de nombreux trésors."
+            "Vous avez découvert un mystérieux temple enterré. Il regorge de colonnes de pierres, de statues souriantes, et d'anciennes inscriptions, sans doute des mantras sacrés. Au fond de ce qui reste du grand hall, vous trouver également des reliques recouvertes d'or."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Prendre les trésors ",
+              "name": "Prendre les trésors",
               "path": 3,
               "ruse": 1,
               "piété": -1
             },
             {
-              "name": "Etudier les inscriptions",
+              "name": "Étudier les inscriptions",
               "path": 3,
               "ruse": -1,
               "piété": 1
@@ -517,7 +517,7 @@
           "id": 3,
           "title": "La seule issue",
           "texts": [
-            "Malheureusement, au moment de remonter, votre corde lâche. Il ne vous reste qu’une seule issue, une minuscule faille qui vous forcerait à abandonner votre équipement."
+            "Malheureusement, vus n'avez plus assez d'énergie pour remonter la paroi du gouffre. Il ne vous reste qu’une seule issue, une minuscule faille dans la roche, qui vous forcerait à abandonner votre équipement."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -528,9 +528,9 @@
               "piété": 1,
               "condition": {
                 "skill": "ruse",
-                "condition": "< -5",
+                "condition": "< -2",
                 "true": "/lose",
-                "endmessage": "Vous n'avez plus aucun équipement."
+                "endmessage": "Vous n'avez plus aucun équipement. Votre survie ne durera plus que quelques jours, avant de mourir seul, de faim et de froid."
               }
             }
           ]
