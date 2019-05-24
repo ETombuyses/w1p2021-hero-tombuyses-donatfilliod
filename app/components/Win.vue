@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header win fade">
+  <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -49,7 +49,7 @@ export default {
       level: localStorage.getItem('level'),
       sound: sounds.winSound,
       soundIcon: "sound-icon",
-      mainclass: "big-header fade"
+      mainclass: "big-header win fade"
     }
   },
   methods: {
@@ -71,11 +71,13 @@ export default {
     }
   },
   mounted() {
+    localStorage.setItem("end", "win");
+
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 
     setTimeout(() => {
-      this.mainclass = "big-header"
+      this.mainclass = "big-header win"
     }, 1000)
   }
 };

@@ -14,8 +14,6 @@
             <h3>Personnage : {{ character }}</h3>
             <li v-for="skill in characterSkills" :key="skill.name">{{skill.name}} : {{ skill.value }}</li>
           </ul>
-
-        
         <ul>
           <h3>Avancée de l'histoire:</h3>
           <p>Chapitre : {{ chapter }}</p>

@@ -29,10 +29,14 @@
     }
   
     .description {
-      margin: 0% 25%;
+      margin: 0% 15%;
       text-align: center;
       line-height: 1.8em;
       margin-bottom: 1em;
+
+      @media(min-width: 1300px) {
+        margin: 0% 25%;
+      }
     }
   
     .results {
