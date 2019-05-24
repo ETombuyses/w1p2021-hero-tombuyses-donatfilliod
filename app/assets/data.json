@@ -53,7 +53,7 @@
           "id": 3,
           "title": "Assassin",
           "texts": [
-            "En le rassurant, vous achever l'homme en serrant sa gorge. Dès que ses paupières se ferment, vous vous munissez du contenu du sac. Il y a là plusieurs ressources allant pouvoir vous protéger du froid et de la faim. L'homme, lui, porte également plusieurs couches de vêtements. Le déshabiller serait plus déshonorant pour sa mémoire, mais pourrait vous offrir une protection supplémentaire contre ce climat difficile.",
+            "En le rassurant, vous achever l'homme en serrant sa gorge. Dès que ses paupières se ferment, vous vous munissez du contenu du sac. Il y a là plusieurs ressources allant pouvoir vous protéger du froid et de la faim. L'homme, lui, porte également plusieurs couches de vêtements. Le déshabiller serait plus déshonorant pour sa mémoire, mais pourrait vous offrir une protection supplémentaire contre ce climat difficile."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -75,7 +75,7 @@
           "id": 4,
           "title": "Le sherpa",
           "texts": [
-            "Sans plus attendre, vous rejoignez le chemin. Vous marchez sur quelques kilomètres, avant de croiser par miracle un homme, accompagné de deux yacks. Il s'agit d'un sherpa, il connaît bien ses montagnes. Vous vous empressez de lui demander secours. Il vous indique la direction à prendre pour rejoindre la ville la plus proche. Laquelle ? ' Celle où le Karma vous guidera ', répondit-il. Il est en pèlerinage, et n'a pas beaucoup de choses à vous offrir, hormis du thé au beurre ' pour clarifier votre esprit perturbé ', ou un momo à la viande, ' pour recouvrer votre énergie '.",
+            "Sans plus attendre, vous rejoignez le chemin. Vous marchez sur quelques kilomètres, avant de croiser par miracle un homme, accompagné de deux yacks. Il s'agit d'un sherpa, il connaît bien ses montagnes. Vous vous empressez de lui demander secours. Il vous indique la direction à prendre pour rejoindre la ville la plus proche. Laquelle ? ' Celle où le Karma vous guidera ', répondit-il. Il est en pèlerinage, et n'a pas beaucoup de choses à vous offrir, hormis du thé au beurre ' pour clarifier votre esprit perturbé ', ou un momo à la viande, ' pour recouvrer votre énergie '."
           ],
           "actions": [
             {
@@ -94,7 +94,7 @@
           "id": 5,
           "title": "Stupa",
           "texts": [
-            "Suivant les indications, vous vous mettez en route. Alors qu'une tempête de neige se lève, vous glaçant les membres, vous tomber sur un stupa, un édifice religieux. Les stupas sont sacrés, et il est interdit de les toucher. Or, le blizzard gronde, et il pourrait vous servir d'abris.",
+            "Suivant les indications, vous vous mettez en route. Alors qu'une tempête de neige se lève, vous glaçant les membres, vous tomber sur un stupa, un édifice religieux. Les stupas sont sacrés, et il est interdit de les toucher. Or, le blizzard gronde, et il pourrait vous servir d'abris."
           ],
           "actions": [
             {
@@ -111,7 +111,7 @@
           "id": 6,
           "title": "Le village",
           "texts": [
-            "Vous arrivez dans un petit village de nomades. Les gens sont étonnés de vous voir et vous fixent du regard. Un peu plus loin, vous remarquez une petite famille modeste, qui vous fait signe de venir. A l'écart, vous voyez un groupe de parias assez louches, mais semblant transporter beaucoup d'équipement avec eux.",
+            "Vous arrivez dans un petit village de nomades. Les gens sont étonnés de vous voir et vous fixent du regard. Un peu plus loin, vous remarquez une petite famille modeste, qui vous fait signe de venir. A l'écart, vous voyez un groupe de parias assez louches, mais semblant transporter beaucoup d'équipement avec eux."
           ],
           "actions": [
             {
@@ -144,7 +144,7 @@
           "id": 7,
           "title": "La famille",
           "texts": [
-            "La famille écoute votre histoire d'un air intéressé. Elle possède peu de moyens, mais vous inviteà dormir dans leur tente pour la nuit. Le lendemain, le village entier vous adresse des sourires. Vous vous préparez à reprendre la route, constatant qu'il vous manque encore quelques ressources pour votre voyage. Avant de partir, la famille vous demande de leur rendre service, en les aidant à réparer une tente défectueuse.",
+            "La famille écoute votre histoire d'un air intéressé. Elle possède peu de moyens, mais vous inviteà dormir dans leur tente pour la nuit. Le lendemain, le village entier vous adresse des sourires. Vous vous préparez à reprendre la route, constatant qu'il vous manque encore quelques ressources pour votre voyage. Avant de partir, la famille vous demande de leur rendre service, en les aidant à réparer une tente défectueuse."
           ],
           "actions": [
             {
@@ -165,7 +165,7 @@
           "id": 8,
           "title": "Les voyageurs",
           "texts": [
-            "Les parias vous racontent qu’ils vivent de petites rapines, et ont alors plusieurs ressources sur eux, qu'ils vous offrent volontiers en échange de vos histoires. Le lendemain, après une nuit sous leur tente, vous êtes satisfait de vos provisions pour le voyage, mais les habitants du village vous regardent d'un mauvais oeil. Avant de partir, les parias proposent de vous enseigner une technique de défense au corps à corps... contre un vieillard.",
+            "Les parias vous racontent qu’ils vivent de petites rapines, et ont alors plusieurs ressources sur eux, qu'ils vous offrent volontiers en échange de vos histoires. Le lendemain, après une nuit sous leur tente, vous êtes satisfait de vos provisions pour le voyage, mais les habitants du village vous regardent d'un mauvais oeil. Avant de partir, les parias proposent de vous enseigner une technique de défense au corps à corps... contre un vieillard."
           ],
           "actions": [
             {
@@ -186,7 +186,7 @@
           "id": 9,
           "title": "Le pélerin",
           "texts": [
-            "Vous quittez le village et continuez de suivre la route indiquée par le sherpa. Vous marchez pendant plusieurs heures, à travers le froid et la faim qui persiste encore. Au bout de plusieurs heures, vous repérez un pèlerin, endormi au bord du chemin. Il semble transporter énormément de choses avec lui.",
+            "Vous quittez le village et continuez de suivre la route indiquée par le sherpa. Vous marchez pendant plusieurs heures, à travers le froid et la faim qui persiste encore. Au bout de plusieurs heures, vous repérez un pèlerin, endormi au bord du chemin. Il semble transporter énormément de choses avec lui."
           ],
           "actions": [
             {
@@ -207,7 +207,7 @@
           "id": 10,
           "title": "Le deuxième stupa",
           "texts": [
-            "Vous êtes arrivé au second stupa, marquant le passage vers les terres sauvages. Vous vous souvenez que la tradition exige une offrande à ce passage, afin d’obtenir la bénédiction des dieux.",
+            "Vous êtes arrivé au second stupa, marquant le passage vers les terres sauvages. Vous vous souvenez que la tradition exige une offrande à ce passage, afin d’obtenir la bénédiction des dieux."
           ],
           "actions": [
             {
@@ -437,7 +437,7 @@
           "id": 9,
           "title": "L'attaque nocturne'",
           "texts": [
-            "Vous vous faites attaquer par un animal sauvage.",
+            "Vous vous faites attaquer par un animal sauvage."
           ],
           "actions": [
             {
@@ -540,7 +540,7 @@
               }
             }
           ]
-        },
+        }
       ]
     }
   ],
