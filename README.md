@@ -13,8 +13,8 @@ Le jeu gravite autour de deux opposés principaux : le bien ou le mal, et la vie
 
 Le jeu repose donc sur le principe du Karma, ou de l’effet papillon, qui désigne le cycle des causes et des conséquences.
 
-URL du site : https://dharma.netlify.com/
-URL des chemins : https://www.figma.com/file/BAGBJxb1PDzzBort7F7vHMZt/Dharma?node-id=0%3A1
+- URL du site : https://dharma.netlify.com/
+- URL des chemins : https://www.figma.com/file/BAGBJxb1PDzzBort7F7vHMZt/Dharma?node-id=0%3A1
 
 ### Groupe
 
