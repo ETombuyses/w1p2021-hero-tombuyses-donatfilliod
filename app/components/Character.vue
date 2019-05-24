@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header character__choice fade">
+  <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -43,6 +43,7 @@ export default {
       characters: game.characters,
       sound: sounds.characterSound,
       soundIcon: "sound-icon",
+      mainclass: "big-header character__choice fade"
     };
   },
   methods: {
@@ -51,16 +52,15 @@ export default {
       this.$router.push({ path: "/chapter1" });
     },
     mute(audio, icon) {
-      this.soundIcon = musicParameter.mute(audio, icon);      
+      this.soundIcon = musicParameter.mute(audio, icon);   
     }
   },
   mounted() {
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 
-    let component = document.querySelector('.fade') 
     setTimeout(() => {
-      component.classList.remove('fade')
+      this.mainclass = "big-header character__choice"
     }, 1000)
   }
 };

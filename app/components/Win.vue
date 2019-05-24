@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header fade">
+  <div :class="mainclass">
     <h1>Bravo, vous vous êtes échapé !</h1>
     <p> {{ winMessage }}</p>
 
@@ -36,7 +36,8 @@ export default {
       chapter: localStorage.getItem('chapter'),
       level: localStorage.getItem('level'),
       sound: sounds.winSound,
-      soundIcon: "sound-icon"
+      soundIcon: "sound-icon",
+      mainclass: "big-header fade"
     }
   },
   methods: {
@@ -61,14 +62,9 @@ export default {
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 
-
-    let component = document.querySelector('.fade') 
     setTimeout(() => {
-      component.classList.remove('fade')
+      this.mainclass = "big-header"
     }, 1000)
-
-  
-  
   }
 };
 </script>
