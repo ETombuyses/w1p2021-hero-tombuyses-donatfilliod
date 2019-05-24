@@ -82,7 +82,11 @@ export default {
 
         setTimeout(() => {
           this.$router.push({ params: { id: nextPath } });
-        leveling.updateLevel(nextPath);
+          leveling.updateLevel(nextPath);
+
+          setTimeout(() => {
+            this.preloadImages()
+          }, 2000)
         }, 800)
         
       }
@@ -122,11 +126,38 @@ export default {
     },
     mute(audio, icon) {
       this.soundIcon = musicParameter.mute(audio, icon);
+    },
+
+    preloadImages() {
+
+      //preload next component image 
+      this.level.actions.forEach(action => {
+
+        if (action.chapter) {
+          let chapterImage = new Image()
+          chapterImage.src = images[`chapter${action.chapter}`]
+        } else {
+          let gameImage = new Image();
+          gameImage.src = images[`chapter${leveling.chapter}level${action.path}`]
+        }
+
+        if (action.condition) {
+          let loseImage = new Image();
+          let winImage = new Image();
+
+          loseImage.src = require("../assets/images/highmount.jpeg");
+          winImage.src = require("../assets/images/lhassa.jpg");
+        }
+      });
     }
   },
 
   mounted() {
-    leveling.updateLevel(this.level.id);
+    leveling.updateLevel(this.level.id)
+    
+    setTimeout(() => {
+      this.preloadImages();
+    }, 2000)
 
     // display the right background
     const background = document.querySelector(".game .background");
@@ -152,13 +183,12 @@ export default {
     "$route.params.id"(to, from) {
       const background = document.querySelector(".game .background");
       background.style.backgroundImage = `url(${
-        images[
-          "chapter" +
-            this.$route.params.number +
+        images["chapter" + this.$route.params.number +
             "level" +
             this.$route.params.id
         ]
       })`;
+
       this.level = this.findLevel();
       this.css = "big-header game";
     }

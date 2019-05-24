@@ -43,10 +43,10 @@ const chapter3level12 = require('../assets/images/doors.jpg');
 
 const character = require('../assets/images/crash3.jpg');
 
-export default {    character, chapter1, chapter2, chapter3,
-                    chapter1level1, chapter1level2, chapter1level3, chapter1level4, chapter1level5, chapter1level6, chapter1level7, chapter1level8, chapter1level9, chapter1level10,
-                    chapter2level1, chapter2level2, chapter2level3, chapter2level4, chapter2level5, chapter2level6, chapter2level7, chapter2level8, chapter2level9,
-                    chapter3level1, chapter3level2, chapter3level3, chapter3level4, chapter3level5, chapter3level6, chapter3level7, chapter3level8, chapter3level9, chapter3level10, chapter3level11, chapter3level12
+export default { character, chapter1, chapter2, chapter3,
+                 chapter1level1, chapter1level2, chapter1level3, chapter1level4, chapter1level5, chapter1level6, chapter1level7, chapter1level8, chapter1level9, chapter1level10,
+                 chapter2level1, chapter2level2, chapter2level3, chapter2level4, chapter2level5, chapter2level6, chapter2level7, chapter2level8, chapter2level9,
+                 chapter3level1, chapter3level2, chapter3level3, chapter3level4, chapter3level5, chapter3level6, chapter3level7, chapter3level8, chapter3level9, chapter3level10, chapter3level11, chapter3level12
                 };
 
 
