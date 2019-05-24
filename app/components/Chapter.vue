@@ -24,7 +24,6 @@ import leveling from '../assets/services/save-level'
 import sounds from '../assets/sounds.js'
 import musicParameter from '../assets/services/audio'
 
-
 export default {
   data() {
     return {
@@ -52,6 +51,23 @@ export default {
 
   },
   mounted() {
+    
+    
+    //preload next component image 
+    if(this.id == 1) {
+      const gameImage = new Image();
+      gameImage.src = require("../assets/images/crash2.2.jpg")
+
+    } else if (this.id == 2) {
+     
+      const gameImage = new Image();
+      gameImage.src = require("../assets/images/phurba.jpg")
+
+    } else if (this.id == 3) {
+      const gameImage = new Image();
+      gameImage.src = require("../assets/images/icecave.jpg")
+    }
+    
 
     // display the right background
     const background = document.querySelector(".chapter .background");

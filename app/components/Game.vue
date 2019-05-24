@@ -29,7 +29,6 @@
 
 
 <script>
-/*import data.json file */
 
 import game from "../assets/data.json"
 import characterUpdate from "../assets/services/character.js"

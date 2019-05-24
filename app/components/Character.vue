@@ -2,7 +2,6 @@
   <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
-
     <h1>Choix du personnage</h1>
     <p class="description">
       Vous vous réveillez péniblement, avec une douleur aigüe au crâne.
@@ -56,6 +55,11 @@ export default {
     }
   },
   mounted() {
+
+    //preload next component image 
+    const chapterImage = new Image();
+    chapterImage.src = require("../assets/images/chap1.jpg")
+
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 

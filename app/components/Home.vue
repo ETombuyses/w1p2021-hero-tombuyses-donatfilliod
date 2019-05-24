@@ -30,7 +30,8 @@ export default {
       button: "commencer l'aventure",
       sound: sounds.homeSound,
       soundIcon: "sound-icon",
-      mainclass: "big-header home fade"
+      mainclass: "big-header home fade",
+      nextImage: "../assets/images/crash3.jpg"
     };
   },
   methods: {
@@ -43,6 +44,11 @@ export default {
   },
 
   mounted() {
+
+    //preload next component image 
+    const characterImage = new Image();
+    characterImage.src = require("../assets/images/crash3.jpg")
+
     //restore level session
 
     if (localStorage.getItem('end')) {
