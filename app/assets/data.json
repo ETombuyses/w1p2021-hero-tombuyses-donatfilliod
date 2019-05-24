@@ -530,7 +530,7 @@
                 "skill": "ruse",
                 "condition": "< -2",
                 "true": "/lose",
-                "endmessage": "Vous n'avez plus aucun équipement. Votre survie ne durera plus que quelques jours, avant de mourir seul, de faim et de froid."
+                "endmessage": "Vous arrivez à passer par la faille, sacrifiant le peu de biens qu'il vous restait. Vous n'avez plus aucun équipement. Votre survie ne durera plus que quelques jours, avant de mourir seul, de faim et de froid."
               }
             }
           ]
@@ -539,7 +539,7 @@
           "id": 4,
           "title": "Le monastère",
           "texts": [
-            "Vous rejoignez un monastère. Il est très fréquenté par plusieurs groupes de moins. Vous êtes bien accueillis, et nourris. Vous voyez d’un côté un groupe de moines étudiants, et de l’autre, le chef spirituel."
+            "Vous arrivez à passer par la faille, et ressorter de l'autre côté de la grotte. Au loin, s'étend un immense plateau désert, que vous allez traverser pendant plusieurs jours. Finalement, vous parvenez à rejoindre un monastère qui se dresse fièrement en haut d'une petite colline. Au contraire de la région, l'entourant, il est très fréquenté par plusieurs groupes de moines. Votre arrivée est chalereusement accueillie, vous êtes nourri, soigné et reposé. Après votre courte convalescence, vous décider d'iinteragir un peu avec les résidents du monastères. Vous avez le choix entre aller voir les nouveaux étudiants, assis ensembles dans le cour, ou au culot, aller directement interpeler le chef spirituel."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -707,6 +707,27 @@
         },
         {
           "id": 11,
+          "title": "Vivre ou mourir",
+          "texts": [
+            "Vous réussissez à maîtriser le premier. Effrayé par votre agressivité, les autres personnes ne réfugient vers le quatrième stupa. Verser du sang au pied de cet édifice religieux serait une grande disgrâce. Mais rien ne vous dit que ces derniers tenteront de vous assassiner dans le dos plus tard, les laisser en vie vous serait d’un grand risque.",
+          ],
+          "actions": [
+            {
+              "name": "Les assassiner et prendre leur richesse",
+              "path": 12,
+              "force": 1,
+              "piété": -1
+            },
+            {
+              "name": "Les laisser vivre et continuer votre chemin",
+              "path": 12,
+              "force": -1,
+              "piété": 1
+            }
+          ]
+        },
+        {
+          "id": 12,
           "title": "Les grandes portes",
           "texts": [
             "Après des heures de marches, vous arrivez enfin à la grande porte ouvrant sur la ville. Votre voyage touche presque à sa fin. Autour de laporte, des pèlerins vous explique que, peut importe la voix qu'il a choisi, quiconque ne peut passer sans être assez pieux."
