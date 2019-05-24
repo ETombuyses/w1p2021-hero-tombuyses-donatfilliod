@@ -276,13 +276,13 @@
           "question": "Que faites-vous ?",
           "actions": [
             {
-              "name": "Sans crier garde, vous lui enfoncez la dague dans le coeur",
+              "name": "Vous lui enfoncez la dague dans le coeur",
               "path": 4,
               "ruse": 1,
               "piété": -1
             },
             {
-              "name": "Assez de sang a dû couler. Vous lui proposez de lui échanger une partie de votre équipement.",
+              "name": "Vous l'échanger contre une partie de votre équipement.",
               "path": 4,
               "piété": -1,
               "ruse": 1
@@ -337,7 +337,7 @@
           "id": 5,
           "title": "Le lac sacré",
           "texts": [
-            "Vous traversez le col, non sans prendre une pause pour contempler l'immensité montagneuse qui se dresse devant vous. Au loin, des bâtiments semblent briller au soleil, sûrement la fameuse ville qui guide votre voyage. En redescendant, vous arrivez à un lac sacré, entouré d'autels et de drapeaux de prières. Ses eaux sont magnifiques et, comme dans un rêve, une barque est attachée sur la berge. Vous savez que traverser ce serait considéré comme un blasphème. Vous pouvez contourner le lac par un chemin rocailleux, mais cela vous affaiblira grandement."
+            "Vous traversez le col, non sans prendre une pause pour contempler l'immensité montagneuse qui se dresse devant vous. Au loin, des bâtiments semblent briller au soleil, sûrement la fameuse ville qui guide votre voyage. En redescendant le flanc de la montagne, vous arrivez à un lac sacré, entouré d'autels et de drapeaux de prières. Ses eaux sont magnifiques et, comme dans un rêve, une barque est attachée sur la berge. Vous savez que traverser ce serait considéré comme un blasphème. Vous pouvez contourner le lac par un chemin rocailleux, mais cela vous affaiblira grandement."
           ],
           "question": "Que faites-vous ?",
           "actions": [
@@ -387,7 +387,7 @@
           "id": 7,
           "title": "Avalanche",
           "texts": [
-            "Malheureusement, le bruit crée par les quelques pierres que vous faites tomber déclenche, au-dessus de votre tête une petite avalanche. Vous devez courir le plus vite possible hors du chemin, hors d’atteinte de l'écoulement, mais votre sac, trop lourd pour votre état de fatigue vous ralenti."
+            "Malheureusement, le bruit crée par les quelques pierres que vous faites tomber déclenche, juste au-dessus de votre tête, une petite avalanche. Vous devez courir le plus vite possible hors du chemin, hors d’atteinte de l'écoulement, mais votre sac, trop lourd pour votre état de fatigue vous ralenti."
           ],
           "question": "Que faites-vous ?",
           "actions": [
@@ -473,7 +473,7 @@
           "id": 1,
           "title": "L'entrée de la grotte",
           "texts": [
-            "Votre combat contre l'ours a été remporté, par miracle, non sans vous laisser de profondes blessures. Vous sentez cependant que vos réflexes ont été accrus. Suspicieux, vous recherchez d’où est-ce que l’animal a bien pu venir pour pénétrer dans la cabane. Au fond de la piève, vous repérez un grand dans la roche, menant à une grotte. Vous vous engagez à l'intérieur. Les parois rocheuses sont recouvertes de glace, renfermant les visages de divinités locales, perdues à jamais. Plus loin, vous tomber sur un énorme gouffre s'ouvrant en un trou béant surplombant un magnifique temple abandonné. Vous pourriez descendre en comptant sur vos aptitudes en escalade, ou bien économiser vos forces et sacrifier encore un peu d'équipement pour descendre en rappel."
+            "Votre combat contre l'ours a été remporté, par miracle, non sans vous laisser de profondes blessures. Vous sentez cependant que vos réflexes ont été accrus. Suspicieux, vous recherchez d’où est-ce que l’animal a bien pu venir pour pénétrer dans la cabane. Au fond de la pièce, vous repérez un grand dans la roche, menant à une grotte. Vous vous engagez à l'intérieur. Les parois rocheuses sont recouvertes de glace, renfermant les visages de divinités locales, perdues à jamais. Plus loin, vous tomber sur un énorme gouffre s'ouvrant en un trou béant surplombant un magnifique temple abandonné. Vous pourriez descendre en comptant sur vos aptitudes en escalade, ou bien économiser vos forces et sacrifier encore un peu d'équipement pour descendre en rappel."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -539,18 +539,18 @@
           "id": 4,
           "title": "Le monastère",
           "texts": [
-            "Vous arrivez à passer par la faille, et ressorter de l'autre côté de la grotte. Au loin, s'étend un immense plateau désert, que vous allez traverser pendant plusieurs jours. Finalement, vous parvenez à rejoindre un monastère qui se dresse fièrement en haut d'une petite colline. Au contraire de la région, l'entourant, il est très fréquenté par plusieurs groupes de moines. Votre arrivée est chalereusement accueillie, vous êtes nourri, soigné et reposé. Après votre courte convalescence, vous décider d'iinteragir un peu avec les résidents du monastères. Vous avez le choix entre aller voir les nouveaux étudiants, assis ensembles dans le cour, ou au culot, aller directement interpeler le chef spirituel."
+            "Vous arrivez à passer par la faille, et ressorter de l'autre côté de la grotte. Au loin, s'étend un immense plateau désert, que vous allez traverser pendant plusieurs jours. Finalement, vous parvenez à rejoindre un monastère qui se dresse fièrement en haut d'une petite colline. Au contraire de la région, l'entourant, il est très fréquenté par plusieurs groupes de moines. Votre arrivée est chalereusement accueillie, vous êtes nourri, soigné et reposé. Après votre courte convalescence, vous décider d'iinteragir un peu avec les résidents du monastères. Vous avez le choix entre aller voir les nouveaux étudiants, assis ensembles dans le cour, ou au culot, aller directement interpeler le chef spirituel des lieux, le grand Lama."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Vous allez directement voir le chef spirituel",
+              "name": "Aller parler au grand Lama",
               "path": 5,
               "force": 1,
               "social": -1
             },
             {
-              "name": "Vous allez voir les étudiants",
+              "name": "Aller parler aux étudiants",
               "path": 6,
               "force": -1,
               "social": 1
@@ -559,9 +559,9 @@
         },
         {
           "id": 5,
-          "title": "Le chef spirituel",
+          "title": "Le grand Lama",
           "texts": [
-            "Il est étonné et presque outré, mais salue votre courage. A votre question, il répond que ‘le chemin s’ouvrira en fonction du regard que tu as porté et que tu décides de porter sur le monde."
+            "Il est étonné et assez choqué de votre insolence, mais salue néanmoins votre courage. A vos questions concernant le chemin que vous êtes en train de suivre, il répond que ‘Le chemin s’ouvrira en fonction du regard que tu as porté, et que tu décides de porter sur le monde."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -572,7 +572,7 @@
               "social": 1
             },
             {
-              "name": "Vous lui demandez une meilleure explciation",
+              "name": "Vous exigez une meilleure explication",
               "path": 7,
               "piété": -1,
               "social": -1
@@ -583,7 +583,7 @@
           "id": 6,
           "title": "Les moines",
           "texts": [
-            "Vous rejoignez les étudiants. Ils vous proposent de participer au rituel des mandalas de sable."
+            "Vous rejoignez les étudiants et les questionnez concernant le chemin que vous êtes en train de suivre. Ceux-ci vous rétorquent qu'ils ne peuvent vous apporter des réponses. Ils sont de plus en plein rituel spirituel : la confection d'un mandala de sable. Ils vous proposent de participer à cette pratique."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
@@ -594,7 +594,7 @@
               "social": 1
             },
             {
-              "name": "Vous refusez et demandez de plus amples réponses",
+              "name": "Vous refusez et exigez des réponses",
               "path": 7,
               "piété": -1,
               "social": -1
@@ -605,18 +605,18 @@
           "id": 7,
           "title": "La grande salle",
           "texts": [
-            "Vous êtes enfermés dans la salle principale, où de nombreux artefacts sont exposés, notamment des fameuses dagues Phurba. Une seul d’entre eux pourrait vous être utile, lorsque vous vous remémorez les dangers qui ont jalonné votre route."
+            "Personne ne semble aptes à vous donner des réponses explicites sur votre destin. Vous décidez d'aller faire un tour dans la grande salle du monastère, vide à cette heure de la journée. Celle-ci est incroyablement décorée, surtout pour une école religieuse prônant le détachement. Il y a d'ailleurs, plusieurs artefacts qui pourraient vous être réellement utiles à vous, voyageur."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Prendre",
+              "name": "Prendre de quoi regonfler votre équipement",
               "path": 8,
               "social": -1,
               "force": 1
             },
             {
-              "name": "Laisser",
+              "name": "Laisser les artefacts",
               "path": 9,
               "force": -1,
               "social": 1
@@ -627,18 +627,18 @@
           "id": 8,
           "title": "Interrogation",
           "texts": [
-            "Un homme vous observait depuis le début, et vous demande ce que vous cachez sous votre manteau."
+            "Une voix derrière vous vous fait sursauter. Un moine vient d'arriver, juste derrière vous. D'un air suspicieux, il demande pourquoi vous semblez autant sur vos gardes, et qu'est-ce que vous cachez sous vos vêtements."
           ],
           "question": "Que choisissez-vous ?",
           "actions": [
             {
-              "name": "Mentir",
+              "name": "Mentir et dire qu'il n'y a rien",
               "path": 9,
               "social": -1,
               "force": 1
             },
             {
-              "name": "Avouer avoir volé",
+              "name": "Avouer avoir volé et s'excuser",
               "path": 9,
               "force": -1,
               "social": 1
@@ -649,11 +649,11 @@
           "id": 9,
           "title": "Interrogation",
           "texts": [
-            "Le jour de votre départ, le chef des lieux explique que vous devez participer à une cérémonie afin de déterminer si vous êtes dangereux ou non.",
+            "Le jour de votre départ, le grand Lama du monastère déclare que vous devez être soumis à un rituel exorciste, afin de déterminer si votre âme est dangereuse ou non, et si elle peut donc librement continuer sa route.",
           ],
           "actions": [
             {
-              "name": "Accepter la cérémonie en prétendant ne rien à avoir à vous reprocher",
+              "name": "Accepter de passer le rituel",
               "path": 10,
               "social": -1,
               "piété": 1,
@@ -661,7 +661,7 @@
                 "skill": "social",
                 "condition": "< -4",
                 "true": "/lose",
-                "endmessage": "Les moines du monastère vous jugent dangereux et ne vous laisse pas partir."
+                "endmessage": "Le chaman chargé du rituel décele en vous une trop grande malveillance. Vous êtes alors encerclés par les moines, et enfermés à jamais dans les souterrains du monastère."
               }
             },
             {
@@ -671,9 +671,9 @@
               "social": 1,
               "condition": {
                 "skill": "social",
-                "condition": "> -10",
+                "condition": "> -15",
                 "true": "/lose",
-                "endmessage": "Les moines du monastère ne vous laisse pas partir."
+                "endmessage": "Votre refus de vous soumettre au rituel conforte les moines dans l'idée que votre âme ne peut continuer sa route. Vous êtes alors encerclés par les moines, et enfermés à jamais dans les souterrains du monastère."
               }
             }
           ]
@@ -682,25 +682,25 @@
           "id": 10,
           "title": "Les bandits",
           "texts": [
-            "Vous continuez votre route, sachant que la ville est maintenant toute proche. Malheureusement, vous vous faites encercler par un groupe de bandits richement vêtus. Vous devez trouver un moyen de survivre. Ces derniers n’ont pas l’air enclins à discuter, mais ne sont pour autant pas armés, et sont plus petits que vous. Juste derrière vous, un jeune homme à peine majeur s’avance.",
+            "Vous continuez votre route et arrivez au bout du plateau. Vous savez que la montagne qu'il vous reste à franchir est la dernière, et que la ville qui a guidé votre voyage est maintenant toute proche. Malheureusement, vous tombez dans une embuscade : vous faites encercler par un groupe de bandits. Ils sont richement vêtus, trophés sans doute obtenu par les menaces qu'ils ont dû proférer aux malheureux ayant croisés leur route. Ces derniers n’ont pas vraiment l’air enclin à discuter, mais ne sont pas pour autant armés. Vous remarquez qu'à votre droite se tient le membre le plus jeune, qui est largement plus petit que vous.",
           ],
           "actions": [
             {
-              "name": "Attaquer celui qui est le proche de vous",
+              "name": "Attaquer le plus faible",
               "path": 11,
               "force": -1,
               "piété": -1
             },
             {
-              "name": "Tenter de discuter",
+              "name": "Tenter de négocier votre passage",
               "path": 11,
               "force": 1,
               "social": 1,
               "condition": {
                 "skill": "social",
-                "condition": "< -15",
+                "condition": "> -15",
                 "true": "/lose",
-                "endmessage": "Les bandits ne vous laisse pas partir et vous capturent."
+                "endmessage": "Les bandits refusent toute tentative de négociation. Face à votre refus de vous battre, il se jettent sur vous, vous plaquent au sol, et vous sombrez sous les coups."
               }
             }
           ]
@@ -709,11 +709,11 @@
           "id": 11,
           "title": "Vivre ou mourir",
           "texts": [
-            "Vous réussissez à maîtriser le premier. Effrayé par votre agressivité, les autres personnes ne réfugient vers le quatrième stupa. Verser du sang au pied de cet édifice religieux serait une grande disgrâce. Mais rien ne vous dit que ces derniers tenteront de vous assassiner dans le dos plus tard, les laisser en vie vous serait d’un grand risque.",
+            "Vous réussissez à maîtriser le premier d'entre eux en lui assénant un énorme coup sur le crâne, le faisant tomber à la renverse. Effrayé par votre agressivité, les autres bandits s'enfuient et vont se réfugier autour du le quatrième stupa, situé un peu plus haut. Verser du sang au pied de cet édifice religieux serait une grande disgrâce. Mais rien ne vous dit que ces derniers ne tenteront pas de vous assassiner dans le dos plus tard, donc les laisser en vie représenterait également un grand risque.",
           ],
           "actions": [
             {
-              "name": "Les assassiner et prendre leur richesse",
+              "name": "Les assassiner et prendre leurs richesses",
               "path": 12,
               "force": 1,
               "piété": -1
@@ -730,7 +730,7 @@
           "id": 12,
           "title": "Les grandes portes",
           "texts": [
-            "Après des heures de marches, vous arrivez enfin à la grande porte ouvrant sur la ville. Votre voyage touche presque à sa fin. Autour de laporte, des pèlerins vous explique que, peut importe la voix qu'il a choisi, quiconque ne peut passer sans être assez pieux.",
+            "Après des heures de marches, vous arrivez enfin au sommet du dernier col. Vous avez achevé la dernière ascension avant d'arriver à la ville, qui s'étend dans la vallée en contrebas. Au centre du col se dresse des immenses portes circulaires, dont une étrange lueur émane de leur centre. Des dizaines de pèlerins sont assis autour, concentrés dans leur prière, ou partis en transe. Ceux encore conscients vous expliquent l'importance de ce lieu : il s'agit des Portes du Jugement. Seuls les personnes ayant été assez pieuse durant leur vie sur ces terres peuvent les franchir. Votre voyage touche presque à sa fin.",
           ],
           "actions": [
             {
@@ -740,7 +740,7 @@
               "ruse": 0,
               "condition": {
                 "skill": "piété",
-                "condition": "< -10",
+                "condition": "< -1",
                 "true": "/lose",
                 "endmessage": "Vous ne pouvez pas passer",
               }

@@ -15,7 +15,10 @@
           class="game__button"
           :key="action.name"
           @click="choiceSelected(action)"
-        >{{ action.name }}</div>
+        >
+        <span>{{ action.name }}</span>
+        
+        </div>
       </div>
     </div>
     <audio :src="sound" autoplay loop ref="audio"></audio>

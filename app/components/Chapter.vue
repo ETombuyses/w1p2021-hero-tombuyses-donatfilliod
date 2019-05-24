@@ -59,6 +59,9 @@ export default {
       images[
         "chapter" + this.$route.params.number]
     })`;
+    background.backgroundRepeat = 'no-repeat';
+    background.backgroundSize = 'cover';
+    background.backgroundPosition = 'bottom';
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);

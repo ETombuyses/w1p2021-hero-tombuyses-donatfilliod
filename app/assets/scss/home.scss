@@ -2,7 +2,7 @@
   transition: opacity 1s;
 
   .background {
-    background-image: url("../images/homescreen.gif");
+    background: linear-gradient(#00000044, #0000004b), url("../images/homescreen.gif");
     opacity: 1;
     background-repeat: no-repeat;
     background-size: cover;

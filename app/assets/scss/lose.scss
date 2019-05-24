@@ -1,6 +1,6 @@
 .lose {
   .background {
-    background-image: url("../images/highmount.jpeg");
+    background: linear-gradient(#0000007e, #0000008f), url("../images/highmount.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -64,4 +64,24 @@
       margin-bottom: 1em;
     }
   }
+
+  .button {
+    padding: 1em 2em;
+      border: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: "Trajan Pro 3";
+      font-size: 14px;
+      color: white;
+      border: 1px solid white;
+      border-radius: 2px;
+      transition: all 0.3s;
+
+      &:hover {
+        background: white;
+        color: rgb(146, 121, 88);
+      }
+  }
+
+  
 }

@@ -26,7 +26,6 @@
 
     <div class="button" @click="restart()">
       <p>Recommencer</p>
-      <p></p>
     </div>
 
     <audio :src="sound" autoplay ref="audio"></audio>
