@@ -20,15 +20,15 @@ URL du site : https://dharma.netlify.com/
 | Données | Le fichier `data.json` décrit 30 phases de jeu ou plus. Indiquez *En partie* s'il en décrit plus de 15. | oui |
 | Pages | Une page d'accueil est présente | oui |
 | Pages | Une page de choix du personnage est présente | oui |
-| Pages | Une page de victoire est présente | - |
-| Pages | Une page d'échec est présente | - |
+| Pages | Une page de victoire est présente | oui |
+| Pages | Une page d'échec est présente | oui |
 | Routing | Une route dont l'`id` varie permet d'afficher les différentes étapes du jeu | oui |
 | Routing | Lorsqu'on recharge la page (`Ctrl + R`), on se trouve toujours à la même étape | oui |
 | Transitions | Chaque page apparaît grâce à une transition fluide (la complexité de la transition n'est pas prise en compte ici) | oui |
 | Transitions | Les transitions internes au jeu (d'une étape à une autre) et externes (intro, fin...) sont différentes | oui |
 | État | Le choix du personnage et/ou de ses caractéristiques impacte l'aventure au moins une fois. **Les caractéristiques de base de chaque personnage sont différentes. Elles donnent ainsi un avantage ou un désavantage de départ différent en fonction de notre choix. Si le premier personnage a 1 point dans une caractéristique, l'autre en a -1** | oui |
 | État | Une décision ou un événement aléatoire survenu pendant l'aventure a un impact sur la suite, au moins une fois. **Chaque choix influe sur les caractéristiques des personnages en les augmentant ou les diminuant. Par la suite, il sera nécessaire d'avoir un certain nombre de points pour passer certaines étapes du jeu** | oui |
-| État | Le choix du personnage et/ou ce qu'il s'est passé pendant l'aventure impactent l'écran de fin. **La page de fin génère une phrase de fin qui dépend du choix qui a tué le joueur et reprend ses statistiques de jeu** | - |
+| État | Le choix du personnage et/ou ce qu'il s'est passé pendant l'aventure impactent l'écran de fin. **La page de fin génère une phrase de fin qui dépend du choix qui a tué le joueur et reprend ses statistiques de jeu** | oui |
 | État | Au moins un service (classe de type `GameService`) est utilisé | oui |
 | Sauvegarde | Lorsqu'on recharge la page (`Ctrl + R`), le personnage, ses caractéristiques, les choix du joueur et tout le reste sont rétablis | oui |
 | Sauvegarde | Lorsqu'on quitte le jeu et qu'on revient plus tard à la page d'accueil (sur le même navigateur), il est possible de reprendre l'aventure où on l'avait laissée | oui |
