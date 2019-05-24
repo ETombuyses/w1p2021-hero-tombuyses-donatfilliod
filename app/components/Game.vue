@@ -60,6 +60,7 @@ export default {
     },
 
     update(action) {
+      
       characterUpdate.updateSkills(action);
     },
 
