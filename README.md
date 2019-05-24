@@ -1,6 +1,20 @@
-# Le site dont vous êtes le héros
+# DHARMA
+## ལྷ་ཆོས།
+
+### Présentation du jeu
+
+Le dharma, dans le bouddhisme ou l’hindouisme, est un terme polymorphe désignant les normes et les lois naturelles, une doctrine ou une religion. Il désigne ce qu’il serait la « bonne » chose à faire, ou le « bon » choix, selon sa propre réalité.
+
+Le jeu gravite autour de deux opposés principaux : le bien ou le mal, et la vie ou la mort. Ces deux opposés sont définis par différentes caractéristiques qui définiront la morale de l’individu, mais également sa survie :
+- La ruse
+- La force
+- L’empathie
+- La piété
+
+Le jeu repose donc sur le principe du Karma, ou de l’effet papillon, qui désigne le cycle des causes et des conséquences.
 
 URL du site : https://dharma.netlify.com/
+URL des chemins : https://www.figma.com/file/BAGBJxb1PDzzBort7F7vHMZt/Dharma?node-id=0%3A1
 
 ### Groupe
 
