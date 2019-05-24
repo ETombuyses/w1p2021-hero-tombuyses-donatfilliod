@@ -14,7 +14,7 @@ Le jeu gravite autour de deux opposés principaux : le bien ou le mal, et la vie
 Le jeu repose donc sur le principe du Karma, ou de l’effet papillon, qui désigne le cycle des causes et des conséquences.
 
 - URL du site : https://dharma.netlify.com/
-- URL des chemins : https://www.figma.com/file/BAGBJxb1PDzzBort7F7vHMZt/Dharma?node-id=0%3A1
+- URL des schémas numériques : https://www.figma.com/file/BAGBJxb1PDzzBort7F7vHMZt/Dharma?node-id=0%3A1
 
 ### Groupe
 
@@ -49,8 +49,3 @@ Le jeu repose donc sur le principe du Karma, ou de l’effet papillon, qui dési
 | Multimédia | L'expérience présente une vidéo ou plus | oui |
 | Multimédia | L'expérience présente un audio ou plus | oui |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | oui |
-
-
-![Chapitre 1](http://zupimages.net/viewer.php?id=19/21/rj4l.jpg)
-![Chapitre 2](http://zupimages.net/viewer.php?id=19/21/8lk4.jpg)
-![Chapitre 3](http://zupimages.net/viewer.php?id=19/21/zaul.jpg)
