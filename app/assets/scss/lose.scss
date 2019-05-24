@@ -1,0 +1,67 @@
+.lose {
+  .background {
+    background-image: url("../images/highmount.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .5;
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+      0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.61), 0 0 5px rgba(0, 0, 0, 0.52),
+      0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+      0 20px 20px rgba(0, 0, 0, 0.75);
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: "Trajan Pro 3";
+  }
+
+  .description {
+    margin: 0% 25%;
+    text-align: center;
+    line-height: 1.8em;
+    margin-bottom: 1em;
+  }
+
+  .results {
+    background: url(../images/paper.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 40vw;
+
+    h2 {
+      font-size: 25px;
+      font-family: 'Trajan Pro 3';
+      margin-bottom: 1em;
+    }
+
+    .units {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: 'Trajan Pro 3';
+      margin-bottom: 1em;
+    }
+  }
+}

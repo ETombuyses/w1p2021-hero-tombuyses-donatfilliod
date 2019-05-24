@@ -60,6 +60,13 @@ export default {
     })`;
     
 
+    // display the right background
+    const background = document.querySelector(".chapter .background");
+    background.style.backgroundImage = `url(${
+      images[
+        "chapter" + this.$route.params.number]
+    })`;
+
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 
