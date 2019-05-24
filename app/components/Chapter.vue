@@ -1,5 +1,5 @@
 <template>
-  <div class=" big-header chapter fade">
+  <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
     <h2> Chapitre {{ id }} </h2>
@@ -34,6 +34,7 @@ export default {
       signs: this.findChapter().signs,
       sound: sounds.chapterSound,
       soundIcon: "sound-icon",
+      mainclass: "big-header chapter fade"
     }
   },
   methods: {
@@ -51,7 +52,6 @@ export default {
 
   },
   mounted() {
-    // leveling.updateChapter(this.id);
 
     // display the right background
     const background = document.querySelector(".chapter .background");
@@ -63,14 +63,13 @@ export default {
     background.backgroundSize = 'cover';
     background.backgroundPosition = 'bottom';
 
+    leveling.updateChapter(this.id);
+
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
-
-    let component = document.querySelector('.fade') 
-
     
     setTimeout(() => {
-      component.classList.remove('fade')
+      this.mainclass = "big-header chapter"
     }, 1000)
 
   }

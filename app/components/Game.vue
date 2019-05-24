@@ -63,6 +63,7 @@ export default {
     },
 
     update(action) {
+      
       characterUpdate.updateSkills(action);
     },
 
@@ -83,7 +84,7 @@ export default {
         setTimeout(() => {
           this.$router.push({ params: { id: nextPath } });
         leveling.updateLevel(nextPath);
-        }, 1000)
+        }, 800)
         
       }
     },
@@ -127,8 +128,6 @@ export default {
 
   mounted() {
     leveling.updateLevel(this.level.id);
-
-    
 
     // display the right background
     const background = document.querySelector(".game .background");

@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header lose fade">
+  <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -48,7 +48,8 @@ export default {
       chapter: localStorage.getItem("chapter"),
       level: localStorage.getItem("level"),
       sound: sounds.lostSound,
-      soundIcon: "sound-icon"
+      soundIcon: "sound-icon",
+      mainclass: "big-header lose fade"
     };
   },
   methods: {
@@ -75,9 +76,9 @@ export default {
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
 
-    let component = document.querySelector('.fade') 
+    
     setTimeout(() => {
-      component.classList.remove('fade')
+      this.mainclass = "big-header lose"
     }, 1000)
   }
 };

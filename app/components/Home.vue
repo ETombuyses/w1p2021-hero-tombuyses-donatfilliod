@@ -1,5 +1,5 @@
 <template>
-  <div class="big-header home fade">
+  <div :class="mainclass">
     <div class="background"></div>
     <div class="vignette"></div>
 
@@ -30,6 +30,7 @@ export default {
       button: "commencer l'aventure",
       sound: sounds.homeSound,
       soundIcon: "sound-icon",
+      mainclass: "big-header home fade"
     };
   },
   methods: {
@@ -60,10 +61,9 @@ export default {
 
     //restore sound settings
     this.soundIcon = musicParameter.restoreAudioSettings(this.$refs.audio, this.soundIcon);
-
-    let component = document.querySelector('.fade') 
+ 
     setTimeout(() => {
-      component.classList.remove('fade')
+      this.mainclass = "big-header home"
     }, 1000)
   }
 };
